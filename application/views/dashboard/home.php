@@ -1,0 +1,183 @@
+<main class="app-content">
+      <div class="app-title">
+        <div>
+          <h1><i class="fa fa-dashboard"></i> Dashboard</h1>
+        </div>
+        <ul class="app-breadcrumb breadcrumb">
+          <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+          <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-3">
+          <div class="widget-small primary coloured-icon"><i class="icon fa fa-users fa-3x"></i>
+            <div class="info">
+              <h6>Surat Masuk</h6>
+              <p><b><?php echo count($surat_masuk) ?></b></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="widget-small info coloured-icon"><i class="icon fa fa-thumbs-o-up fa-3x"></i>
+            <div class="info">
+              <h6>Surat Keluar</h6>
+              <p><b><?php echo count($surat_keluar) ?></b></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="widget-small warning coloured-icon"><i class="icon fa fa-files-o fa-3x"></i>
+            <div class="info">
+              <h6>Surat Tugas</h6>
+              <p><b><?php echo count($surat_tugas) ?></b></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="widget-small danger coloured-icon"><i class="icon fa fa-star fa-3x"></i>
+            <div class="info">
+              <h6>Surat Keputusan</h6>
+              <p><b><?php echo count($surat_keputusan) ?></b></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="tile">
+            <h3 class="tile-title">Surat Masuk</h3>
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <tr>
+                  <th width="10px">No</th>
+                  <th>Judul</th>
+                  <th width="120px">Tanggal Masuk</th>
+                </tr>
+                <?php foreach ($surat_masuk as $row) { ?>
+                  <tr>
+                    <td><?php echo $row['id'] ?></td>
+                    <td><?php echo $row['nama'] ?></td>
+                    <td><?php echo $row['created_at'] ?></td>
+                  </tr>
+                <?php } ?>
+              </table>
+            </div>
+            <a href="#">Selengkapnya</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="tile">
+            <h3 class="tile-title">Surat Keluar</h3>
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <tr>
+                  <th width="10px">No</th>
+                  <th>Judul</th>
+                  <th width="120px">Tanggal Masuk</th>
+                </tr>
+                <?php foreach ($surat_keluar as $row) { ?>
+                  <tr>
+                    <td><?php echo $row['id'] ?></td>
+                    <td><?php echo $row['nama'] ?></td>
+                    <td><?php echo $row['created_at'] ?></td>
+                  </tr>
+                <?php } ?>
+              </table>
+            </div>
+            <a href="#">Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="tile">
+            <h3 class="tile-title">Surat Tugas</h3>
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <tr>
+                  <th width="10px">No</th>
+                  <th>Judul</th>
+                  <th width="120px">Tanggal Masuk</th>
+                </tr>
+                <?php foreach ($surat_tugas as $row) { ?>
+                  <tr>
+                    <td><?php echo $row['id'] ?></td>
+                    <td><?php echo $row['nama'] ?></td>
+                    <td><?php echo $row['created_at'] ?></td>
+                  </tr>
+                <?php } ?>
+              </table>
+            </div>
+            <a href="#">Selengkapnya</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="tile">
+            <h3 class="tile-title">Surat Keputusan</h3>
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <tr>
+                  <th width="10px">No</th>
+                  <th>Judul</th>
+                  <th width="120px">Tanggal Masuk</th>
+                </tr>
+                <?php foreach ($surat_keputusan as $row) { ?>
+                  <tr>
+                    <td><?php echo $row['id'] ?></td>
+                    <td><?php echo $row['nama'] ?></td>
+                    <td><?php echo $row['created_at'] ?></td>
+                  </tr>
+                <?php } ?>
+              </table>
+            </div>
+            <a href="#">Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="tile">
+            <h3 class="tile-title">Undangan Masuk</h3>
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <tr>
+                  <th width="10px">No</th>
+                  <th>Judul</th>
+                  <th width="120px">Tanggal Masuk</th>
+                </tr>
+                <?php foreach ($undangan_masuk as $row) { ?>
+                  <tr>
+                    <td><?php echo $row['id'] ?></td>
+                    <td><?php echo $row['nama'] ?></td>
+                    <td><?php echo $row['created_at'] ?></td>
+                  </tr>
+                <?php } ?>
+              </table>
+            </div>
+            <a href="#">Selengkapnya</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="tile">
+            <h3 class="tile-title">Undangan Keluar</h3>
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <tr>
+                  <th width="10px">No</th>
+                  <th>Judul</th>
+                  <th width="120px">Tanggal Masuk</th>
+                </tr>
+                <?php foreach ($undangan_keluar as $row) { ?>
+                  <tr>
+                    <td><?php echo $row['id'] ?></td>
+                    <td><?php echo $row['nama'] ?></td>
+                    <td><?php echo $row['created_at'] ?></td>
+                  </tr>
+                <?php } ?>
+              </table>
+            </div>
+            <a href="#">Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+    </main>
