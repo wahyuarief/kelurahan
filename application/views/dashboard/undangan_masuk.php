@@ -25,11 +25,16 @@
                 <tbody>
                   <?php foreach ($undangan_masuk as $row) { ?>
                     <tr>
-                      <td><?php echo $row['no_surat'] ?></td>
+                      <td><?php echo $row['no_undangan'] ?></td>
                       <td><?php echo $row['no_registrasi'] ?></td>
                       <td><?php echo $row['nama'] ?></td>
                       <td><?php echo $row['created_at'] ?></td>
-                      <td>Detail</td>
+                      <td>
+                      <div class="btn-group">
+                        <a href="<?=base_url('undangan/edit/').$row['id']?>" class="form-control btn btn-warning">Edit</a>
+                        <a href="<?=base_url('undangan/delete/').$row['id']?>" class="form-control btn btn-danger">Delete</a>
+                      </div>
+                      </td>
                     </tr>
                   <?php } ?>
                 </tbody>

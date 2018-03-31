@@ -11,7 +11,7 @@ class Pegawai extends CI_Controller {
     $pegawai = $this->crud_model->_read_where('pegawai', ['nip'=>$this->session->userdata('pondokbambu')['nip']])->result_array();
     foreach ($pegawai as $row) {
       $this->data['nip'] = $row['nip'];
-      $this->data['nama_pegawai'] = $row['nama'];
+      $this->data['nama_pegawai'] = $row['nama_belakang'];
       $this->data['jabatan'] = $row['jabatan'];
       $this->data['foto'] = $row['foto'];
     }

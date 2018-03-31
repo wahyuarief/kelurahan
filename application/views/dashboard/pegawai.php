@@ -16,7 +16,8 @@
                 <thead>
                   <tr>
                     <th width="10px">NIP</th>
-                    <th>Nama</th>
+                    <th>Nama Depan</th>
+                    <th>Nama Belakang</th>                    
                     <th>Jabatan</th>
                     <th>Keterangan</th>
                     <th width="120px">Last Login</th>
@@ -26,7 +27,8 @@
                   <?php foreach ($pegawai as $row) { ?>
                     <tr>
                       <td><a href="<?php echo base_url('pegawai/detail/').$row['nip'] ?>"><?php echo $row['nip'] ?></a></td>
-                      <td><?php echo $row['nama'] ?></td>
+                      <td><?php echo $row['nama_depan'] ?></td>
+                      <td><?php echo $row['nama_belakang'] ?></td>                      
                       <td><?php echo $row['jabatan'] ?></td>
                       <td><?php echo $row['keterangan'] ?></td>
                       <td><?php echo $row['last_login'] ?></td>

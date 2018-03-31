@@ -12,6 +12,12 @@
         <div class="col-md-12">
           <div class="tile">
             <div class="table-responsive">
+              <?php if($this->session->flashdata('msg_berhasil')){ ?>
+                <div class="alert alert-success alert-dismissible">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Success!</strong><br> <?php echo $this->session->flashdata('msg_berhasil');?>
+               </div>
+              <?php } ?>
               <table class="table table-striped" id="TableListPegawai">
                 <thead>
                   <tr>
@@ -29,7 +35,12 @@
                       <td><?php echo $row['no_registrasi'] ?></td>
                       <td><?php echo $row['nama'] ?></td>
                       <td><?php echo $row['created_at'] ?></td>
-                      <td>Detail</td>
+                      <td>
+                      <div class="btn-group">
+                        <a href="<?=base_url('surat/edit/').$row['id']?>" class="form-control btn btn-warning">Edit</a>
+                        <a href="<?=base_url('surat/delete/').$row['id']?>" class="form-control btn btn-danger">Delete</a>
+                      </div>
+                      </td>
                     </tr>
                   <?php } ?>
                 </tbody>

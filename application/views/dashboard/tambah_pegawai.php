@@ -19,8 +19,9 @@
                     <input type="number" name="nohp" class="form-control">
                   </div>
                   <div class="form-group">
-                    <label>Nama Pegawai</label>
-                    <input type="text" name="nama" class="form-control">
+                    <label>Nama Pegawai</label><br>
+                      <input type="text" name="nama_depan" class="form-control" style="width:49%;display:inline-block" placeholder="Nama Depan">
+                      <input type="text" name="nama_belakang" class="form-control" style="width:50%;display:inline-block;margin-left:2px" placeholder="Nama Belakang">                    
                   </div>
                   <div class="form-group">
                     <label>Jabatan</label>

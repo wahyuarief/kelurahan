@@ -29,7 +29,12 @@
                       <td><?php echo $row['no_registrasi'] ?></td>
                       <td><?php echo $row['nama'] ?></td>
                       <td><?php echo $row['created_at'] ?></td>
-                      <td>Detail</td>
+                      <td>
+                      <div class="btn-group">
+                        <a href="<?=base_url('surat/edit/').$row['id']?>" class="form-control btn btn-warning">Edit</a>
+                        <a href="<?=base_url('surat/delete/').$row['id']?>" class="form-control btn btn-danger">Delete</a>
+                      </div>
+                      </td>
                     </tr>
                   <?php } ?>
                 </tbody>
