@@ -43,9 +43,17 @@
         </div>
       </div>
       <div class="row">
+        <div class="col-md-12">
+          <div class="tile">
+            <div class="tile-title">Struktur Pegawai</div>
+            halo halo
+          </div>
+        </div>
+      </div>
+      <div class="row">
         <div class="col-md-6">
           <div class="tile">
-            <h3 class="tile-title">Surat Masuk</h3>
+            <div class="tile-title">Surat Masuk</div>
             <div class="table-responsive">
               <table class="table table-striped">
                 <tr>
@@ -67,7 +75,7 @@
         </div>
         <div class="col-md-6">
           <div class="tile">
-            <h3 class="tile-title">Surat Keluar</h3>
+            <div class="tile-title">Surat Keluar</div>
             <div class="table-responsive">
               <table class="table table-striped">
                 <tr>
@@ -91,7 +99,7 @@
       <div class="row">
         <div class="col-md-6">
           <div class="tile">
-            <h3 class="tile-title">Surat Tugas</h3>
+            <div class="tile-title">Surat Tugas</div>
             <div class="table-responsive">
               <table class="table table-striped">
                 <tr>
@@ -113,7 +121,7 @@
         </div>
         <div class="col-md-6">
           <div class="tile">
-            <h3 class="tile-title">Surat Keputusan</h3>
+            <div class="tile-title">Surat Keputusan</div>
             <div class="table-responsive">
               <table class="table table-striped">
                 <tr>
@@ -137,7 +145,7 @@
       <div class="row">
         <div class="col-md-6">
           <div class="tile">
-            <h3 class="tile-title">Undangan Masuk</h3>
+            <div class="tile-title">Undangan Masuk</div>
             <div class="table-responsive">
               <table class="table table-striped">
                 <tr>
@@ -159,7 +167,7 @@
         </div>
         <div class="col-md-6">
           <div class="tile">
-            <h3 class="tile-title">Undangan Keluar</h3>
+            <div class="tile-title">Undangan Keluar</div>
             <div class="table-responsive">
               <table class="table table-striped">
                 <tr>

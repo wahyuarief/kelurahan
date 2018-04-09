@@ -44,13 +44,17 @@
                     <input type="text" name="noregistrasi" class="form-control" require>
                   </div>
                   <div class="form-group">
-                    <label>Kategori Id</label>
+                    <label>Kategori</label>
                     <select name="kategoriid" class="form-control">
                       <option></option>
                       <?php foreach($listKategori as $d){?>
                       <option value="<?=$d->id?>"><?=$d->nama?></option>
                       <?php } ?>
                     </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Tanggal Masuk</label>
+                    <input type="date" name="tglmasuk" class="form-control" require>
                   </div>
                   <div class="form-group">
                     <input type="submit" name="submit" value="Tambah" class="form-control btn btn-primary">

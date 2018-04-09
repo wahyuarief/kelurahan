@@ -11,7 +11,7 @@ class Surat extends CI_Controller {
     $pegawai = $this->crud_model->_read_where('pegawai', ['nip'=>$this->session->userdata('pondokbambu')['nip']])->result_array();
     foreach ($pegawai as $row) {
       $this->data['nip'] = $row['nip'];
-      $this->data['nama_pegawai'] = $row['nama_belakang'];
+      $this->data['nama_pegawai'] = $row['nama_depan'];
       $this->data['jabatan'] = $row['jabatan'];
       $this->data['foto'] = $row['foto'];
     }
@@ -49,29 +49,31 @@ class Surat extends CI_Controller {
   {
     $this->form_validation->set_rules('nama', 'Judul', 'required');
     $this->form_validation->set_rules('isi', 'Isi', 'required|trim');
-    $this->form_validation->set_rules('nosurat', 'Nomor Surat', 'required');        
-    $this->form_validation->set_rules('noregistrasi', 'Nomor Registrasi', 'required');    
-    
+    $this->form_validation->set_rules('nosurat', 'Nomor Surat', 'required');
+    $this->form_validation->set_rules('noregistrasi', 'Nomor Registrasi', 'required');
+
     if($this->form_validation->run())
-    {      
+    {
       $s = $this->input->post('nama',true);
-      $slug = strtolower(str_replace(' ','-',$s));
+      $slug = url_title(convert_accented_characters($s));
       $d = array(
-              'peg_id' => $this->data['nip'],
-              'kat_id' => $this->input->post('kategoriid',true),
-              'nama' =>  $this->input->post('nama',true),
-              'isi' => $this->input->post('isi',true),
-              'no_surat' => $this->input->post('nosurat',true),
-              'no_registrasi' => $this->input->post('noregistrasi',true),
-              'slug' =>$slug ,
+        'peg_id' => $this->data['nip'],
+        'kat_id' => $this->input->post('kategoriid',true),
+        'nama' =>  $this->input->post('nama',true),
+        'isi' => $this->input->post('isi',true),
+        'no_surat' => $this->input->post('nosurat',true),
+        'no_registrasi' => $this->input->post('noregistrasi',true),
+        'slug' => $slug,
+        'created_at' => date('Y-m-d H:i:s')
       );
 
       $this->crud_model->_create('laporan',$d);
-      
+
       $this->session->set_flashdata('msg_berhasil','Data Berhasil Dimasukkan');
       redirect(base_url('surat/tambah'));
     }else{
       $this->data['page'] = 'dashboard/tambah_surat';
+      $this->db->like('nama', 'surat');
       $this->data['listKategori'] = $this->crud_model->_read('kategori_laporan')->result();
       $this->parser->parse('dashboard/layout/wrapper', $this->data);
     }
@@ -80,27 +82,27 @@ class Surat extends CI_Controller {
   {
     $this->form_validation->set_rules('nama', 'Judul', 'required');
     $this->form_validation->set_rules('isi', 'Isi', 'required|trim');
-    $this->form_validation->set_rules('nosurat', 'Nomor Surat', 'required');        
-    $this->form_validation->set_rules('noregistrasi', 'Nomor Registrasi', 'required');    
-    
+    $this->form_validation->set_rules('nosurat', 'Nomor Surat', 'required');
+    $this->form_validation->set_rules('noregistrasi', 'Nomor Registrasi', 'required');
+
     if($this->form_validation->run())
-    {      
+    {
       $s = $this->input->post('nama',true);
-      $slug = strtolower(str_replace(' ','-',$s));
+      $slug = url_title(convert_accented_characters($s));
       $d = array(
-              'peg_id' => $this->data['nip'],
-              'kat_id' => $this->input->post('kategoriid',true),
-              'nama' =>  $this->input->post('nama',true),
-              'isi' => $this->input->post('isi',true),
-              'no_surat' => $this->input->post('nosurat',true),
-              'no_registrasi' => $this->input->post('noregistrasi',true),
-              'slug' =>$slug ,
-              'updated_at' => date('Y-m-d H:i:s'),
+        'peg_id' => $this->data['nip'],
+        'kat_id' => $this->input->post('kategoriid',true),
+        'nama' =>  $this->input->post('nama',true),
+        'isi' => $this->input->post('isi',true),
+        'no_surat' => $this->input->post('nosurat',true),
+        'no_registrasi' => $this->input->post('noregistrasi',true),
+        'slug' =>$slug ,
+        'updated_at' => date('Y-m-d H:i:s'),
       );
       $w = array('id' => $this->input->post('id',true));
 
       $this->crud_model->_update('laporan',$d,$w);
-      
+
       $this->session->set_flashdata('msg_berhasil','Data Berhasil Diupdate');
       redirect(base_url('surat/masuk'));
     }else{

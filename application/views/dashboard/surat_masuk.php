@@ -24,7 +24,7 @@
                     <th width="50px">No Surat</th>
                     <th width="50px">No Registrasi</th>
                     <th>Judul</th>
-                    <th width="50px">Masuk</th>
+                    <th width="50px">Tanggal Masuk</th>
                     <th width="50px">Options</th>
                   </tr>
                 </thead>
@@ -37,6 +37,7 @@
                       <td><?php echo $row['created_at'] ?></td>
                       <td>
                       <div class="btn-group">
+                        <a href="<?=base_url('surat/lihat/').$row['id']?>" class="form-control btn btn-info">Lihat</a>
                         <a href="<?=base_url('surat/edit/').$row['id']?>" class="form-control btn btn-warning">Edit</a>
                         <a href="<?=base_url('surat/delete/').$row['id']?>" class="form-control btn btn-danger">Delete</a>
                       </div>

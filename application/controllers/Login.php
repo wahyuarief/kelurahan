@@ -28,7 +28,11 @@ class Login extends CI_Controller {
             'jabatan' => $data['jabatan']
           ));
           redirect(base_url());
+        } else {
+          echo "nip / password salah";
         }
+      } else {
+        echo "nip / password salah";
       }
     }
 	}

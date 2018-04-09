@@ -11,17 +11,36 @@
       <div class="row">
         <div class="col-md-12">
           <div class="tile">
+            <?php if($this->session->flashdata('msg_berhasil')){ ?>
+                <div class="alert alert-success alert-dismissible">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Success!</strong><br> <?php echo $this->session->flashdata('msg_berhasil');?>
+               </div>
+              <?php } ?>
+
+              <?php if(validation_errors()){ ?>
+              <div class="alert alert-warning alert-dismissible">
+                  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                  <strong>Warning!</strong><br> <?php echo validation_errors(); ?>
+             </div>
+            <?php } ?>
             <form method="post" enctype="multipart/form-data">
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
                     <label>Nomor Induk Pegawai</label>
-                    <input type="number" name="nohp" class="form-control">
+                    <input type="number" name="nip" class="form-control">
                   </div>
                   <div class="form-group">
                     <label>Nama Pegawai</label><br>
-                      <input type="text" name="nama_depan" class="form-control" style="width:49%;display:inline-block" placeholder="Nama Depan">
-                      <input type="text" name="nama_belakang" class="form-control" style="width:50%;display:inline-block;margin-left:2px" placeholder="Nama Belakang">                    
+                    <div class="row">
+                      <div class="col-md-6">
+                        <input type="text" name="nama_depan" class="form-control" placeholder="Nama Depan">
+                      </div>
+                      <div class="col-md-6">
+                        <input type="text" name="nama_belakang" class="form-control" placeholder="Nama Belakang">
+                      </div>
+                    </div>
                   </div>
                   <div class="form-group">
                     <label>Jabatan</label>
