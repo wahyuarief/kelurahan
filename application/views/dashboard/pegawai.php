@@ -16,22 +16,20 @@
                 <thead>
                   <tr>
                     <th width="10px">NIP</th>
-                    <th>Nama Depan</th>
-                    <th>Nama Belakang</th>                    
+                    <th>Nama Lengkap</th>
                     <th>Jabatan</th>
                     <th>Keterangan</th>
-                    <th width="120px">Last Login</th>
+                    <th>Opsi</th>
                   </tr>
                 </thead>
                 <tbody>
                   <?php foreach ($pegawai as $row) { ?>
                     <tr>
-                      <td><a href="<?php echo base_url('pegawai/detail/').$row['nip'] ?>"><?php echo $row['nip'] ?></a></td>
-                      <td><?php echo $row['nama_depan'] ?></td>
-                      <td><?php echo $row['nama_belakang'] ?></td>                      
+                      <td><?php echo $row['nip'] ?></td>
+                      <td><?php echo $row['nama_depan']." ".$row['nama_belakang'] ?></td>
                       <td><?php echo $row['jabatan'] ?></td>
                       <td><?php echo $row['keterangan'] ?></td>
-                      <td><?php echo $row['last_login'] ?></td>
+                      <td><a href="<?php echo base_url('pegawai/detail/').$row['nip'] ?>" class="btn btn-sm btn-info">Lihat</a></td>
                     </tr>
                   <?php } ?>
                 </tbody>

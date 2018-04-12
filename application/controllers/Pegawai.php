@@ -15,6 +15,7 @@ class Pegawai extends CI_Controller {
       $this->data['jabatan'] = $row['jabatan'];
       $this->data['foto'] = $row['foto'];
     }
+    $this->data['katlap'] = $this->crud_model->_read('kategori_laporan')->result_array();
   }
 	public function index()
 	{

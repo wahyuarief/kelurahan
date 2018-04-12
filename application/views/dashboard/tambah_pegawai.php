@@ -1,7 +1,7 @@
 <main class="app-content">
       <div class="app-title">
         <div>
-          <h1><i class="fa fa-dashboard"></i> Tambah Pegawai</h1>
+          <h1><i class="fa fa-plus"></i> Tambah Pegawai</h1>
         </div>
         <ul class="app-breadcrumb breadcrumb">
           <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
@@ -65,7 +65,7 @@
                     <input type="password" name="password" class="form-control">
                   </div>
                   <div class="form-group">
-                    <input type="submit" name="submit" value="Tambah" class="form-control btn btn-primary">
+                    <input type="submit" name="submit" value="Simpan" class="form-control btn btn-primary">
                   </div>
                 </div>
               </div>

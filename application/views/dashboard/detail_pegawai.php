@@ -1,7 +1,7 @@
 <main class="app-content">
       <div class="app-title">
         <div>
-          <h1><i class="fa fa-dashboard"></i> Detail Pegawai</h1>
+          <h1><i class="fa fa-user"></i> Detail Pegawai</h1>
         </div>
         <ul class="app-breadcrumb breadcrumb">
           <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
@@ -15,24 +15,23 @@
               <?php if ($kategori) { ?>
               <thead>
                 <tr>
-                  <th width="50px">No Surat</th>
+                  <th width="50px">No Laporan</th>
                   <th width="50px">No Registrasi</th>
-                  <th>Judul</th>
+                  <th>Hal</th>
                   <th width="50px">Tanggal Masuk</th>
-                  <th width="50px">Options</th>
+                  <th width="50px">Opsi</th>
                 </tr>
               </thead>
               <tbody>
                 <?php echo "<div class='tile-title'>".$kategori['nama']."</div>"; foreach ($laporan as $row) { ?>
                   <tr>
-                    <td><?php echo $row['no_surat'] ?></td>
+                    <td><?php echo $row['no_laporan'] ?></td>
                     <td><?php echo $row['no_registrasi'] ?></td>
                     <td><?php echo $row['nama'] ?></td>
                     <td><?php echo $row['created_at'] ?></td>
                     <td>
                     <div class="btn-group">
-                      <a href="#" class="form-control btn btn-info">Lihat</a>
-                      <a href="#" class="form-control btn btn-warning">Print</a>
+                      <a href="#" class="form-control btn btn-sm btn-info">Lihat</a>
                     </div>
                     </td>
                   </tr>

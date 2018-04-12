@@ -27,7 +27,7 @@ class Login extends CI_Controller {
             'nama' => $data['nama'],
             'jabatan' => $data['jabatan']
           ));
-          redirect(base_url());
+          redirect(base_url('dashboard'));
         } else {
           echo "nip / password salah";
         }

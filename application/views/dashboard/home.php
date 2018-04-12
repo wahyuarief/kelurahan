@@ -58,12 +58,12 @@
               <table class="table table-striped">
                 <tr>
                   <th width="10px">No</th>
-                  <th>Judul</th>
+                  <th>Hal</th>
                   <th width="120px">Tanggal Masuk</th>
                 </tr>
-                <?php foreach ($surat_masuk as $row) { ?>
+                <?php $i=1;foreach ($surat_masuk as $row) { ?>
                   <tr>
-                    <td><?php echo $row['id'] ?></td>
+                    <td><?php echo $i++ ?></td>
                     <td><?php echo $row['nama'] ?></td>
                     <td><?php echo $row['created_at'] ?></td>
                   </tr>
@@ -80,12 +80,12 @@
               <table class="table table-striped">
                 <tr>
                   <th width="10px">No</th>
-                  <th>Judul</th>
+                  <th>Hal</th>
                   <th width="120px">Tanggal Masuk</th>
                 </tr>
-                <?php foreach ($surat_keluar as $row) { ?>
+                <?php $i=1;foreach ($surat_keluar as $row) { ?>
                   <tr>
-                    <td><?php echo $row['id'] ?></td>
+                    <td><?php echo $i++ ?></td>
                     <td><?php echo $row['nama'] ?></td>
                     <td><?php echo $row['created_at'] ?></td>
                   </tr>
@@ -104,12 +104,12 @@
               <table class="table table-striped">
                 <tr>
                   <th width="10px">No</th>
-                  <th>Judul</th>
+                  <th>Hal</th>
                   <th width="120px">Tanggal Masuk</th>
                 </tr>
-                <?php foreach ($surat_tugas as $row) { ?>
+                <?php $i=1;foreach ($surat_tugas as $row) { ?>
                   <tr>
-                    <td><?php echo $row['id'] ?></td>
+                    <td><?php echo $i++ ?></td>
                     <td><?php echo $row['nama'] ?></td>
                     <td><?php echo $row['created_at'] ?></td>
                   </tr>
@@ -126,12 +126,12 @@
               <table class="table table-striped">
                 <tr>
                   <th width="10px">No</th>
-                  <th>Judul</th>
+                  <th>Hal</th>
                   <th width="120px">Tanggal Masuk</th>
                 </tr>
-                <?php foreach ($surat_keputusan as $row) { ?>
+                <?php $i=1;foreach ($surat_keputusan as $row) { ?>
                   <tr>
-                    <td><?php echo $row['id'] ?></td>
+                    <td><?php echo $i++ ?></td>
                     <td><?php echo $row['nama'] ?></td>
                     <td><?php echo $row['created_at'] ?></td>
                   </tr>
@@ -150,12 +150,12 @@
               <table class="table table-striped">
                 <tr>
                   <th width="10px">No</th>
-                  <th>Judul</th>
+                  <th>Hal</th>
                   <th width="120px">Tanggal Masuk</th>
                 </tr>
-                <?php foreach ($undangan_masuk as $row) { ?>
+                <?php $i=1;foreach ($undangan_masuk as $row) { ?>
                   <tr>
-                    <td><?php echo $row['id'] ?></td>
+                    <td><?php echo $i++ ?></td>
                     <td><?php echo $row['nama'] ?></td>
                     <td><?php echo $row['created_at'] ?></td>
                   </tr>
@@ -172,12 +172,12 @@
               <table class="table table-striped">
                 <tr>
                   <th width="10px">No</th>
-                  <th>Judul</th>
+                  <th>Hal</th>
                   <th width="120px">Tanggal Masuk</th>
                 </tr>
-                <?php foreach ($undangan_keluar as $row) { ?>
+                <?php $i=1;foreach ($undangan_keluar as $row) { ?>
                   <tr>
-                    <td><?php echo $row['id'] ?></td>
+                    <td><?php echo $i++ ?></td>
                     <td><?php echo $row['nama'] ?></td>
                     <td><?php echo $row['created_at'] ?></td>
                   </tr>

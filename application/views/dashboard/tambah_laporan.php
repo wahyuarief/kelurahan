@@ -1,11 +1,11 @@
 <main class="app-content">
       <div class="app-title">
         <div>
-          <h1><i class="fa fa-dashboard"></i> Tambah Undangan</h1>
+          <h1><i class="fa fa-plus"></i> Tambah Laporan</h1>
         </div>
         <ul class="app-breadcrumb breadcrumb">
           <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
-          <li class="breadcrumb-item"><a href="#">Tambah Undangan</a></li>
+          <li class="breadcrumb-item"><a href="#">Tambah Laporan</a></li>
         </ul>
       </div>
       <div class="row">
@@ -28,7 +28,7 @@
               <div class="row">
                 <div class="col-md-8">
                   <div class="form-group">
-                    <input type="text" name="nama" class="form-control" placeholder="Judul">
+                    <input type="text" name="nama" class="form-control" placeholder="Hal">
                   </div>
                   <div class="form-group">
                     <textarea name="isi" rows="12" class="form-control textboxio"></textarea>
@@ -36,8 +36,8 @@
                 </div>
                 <div class="col-md-4">
                   <div class="form-group">
-                    <label>Nomor Undangan</label>
-                    <input type="text" name="noundagan" class="form-control" require>
+                    <label>Nomor Laporan</label>
+                    <input type="text" name="nosurat" class="form-control" require>
                   </div>
                   <div class="form-group">
                     <label>Nomor Registrasi</label>
@@ -53,11 +53,7 @@
                     </select>
                   </div>
                   <div class="form-group">
-                    <label>Tanggal Masuk</label>
-                    <input type="date" name="tglmasuk" class="form-control" require>
-                  </div>
-                  <div class="form-group">
-                    <input type="submit" name="submit" value="Tambah" class="form-control btn btn-primary">
+                    <input type="submit" name="submit" value="Simpan" class="form-control btn btn-primary">
                   </div>
                 </div>
               </div>

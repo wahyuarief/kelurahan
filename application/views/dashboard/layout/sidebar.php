@@ -9,20 +9,18 @@
         </div>
       </div>
       <ul class="app-menu">
-        <li><a class="app-menu__item active" href="<?php echo base_url() ?>"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Dashboard</span></a></li>
-        <li><a class="app-menu__item" href="<?php echo base_url('pegawai/tambah'); ?>"><i class="app-menu__icon fa fa-plus"></i><span class="app-menu__label">Tambah Pegawai</span></a></li>
-        <li><a class="app-menu__item" href="<?php echo base_url('pegawai') ?>"><i class="app-menu__icon fa fa-list"></i><span class="app-menu__label">List Pegawai</span></a></li>
-        <li><a class="app-menu__item" href="<?php echo base_url('surat/tambah'); ?>"><i class="app-menu__icon fa fa-plus"></i><span class="app-menu__label">Tambah Surat</span></a></li>
-        <li><a class="app-menu__item" href="<?php echo base_url('undangan/tambah'); ?>"><i class="app-menu__icon fa fa-plus"></i><span class="app-menu__label">Tambah Undangan</span></a></li>
+        <li><a class="app-menu__item" href="<?php echo base_url('dashboard') ?>"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Dashboard</span></a></li>
+        <li><a class="app-menu__item" href="<?php echo base_url('laporan/tambah'); ?>"><i class="app-menu__icon fa fa-plus"></i><span class="app-menu__label">Tambah Laporan</span></a></li>
         <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-files-o"></i><span class="app-menu__label">Laporan</span><i class="treeview-indicator fa fa-angle-right"></i></a>
           <ul class="treeview-menu">
-            <li><a class="treeview-item" href="<?php echo base_url('surat/masuk') ?>"><i class="icon fa fa-circle-o"></i> Surat Masuk</a></li>
-            <li><a class="treeview-item" href="<?php echo base_url('surat/keluar') ?>"><i class="icon fa fa-circle-o"></i> Surat Keluar</a></li>
-            <li><a class="treeview-item" href="<?php echo base_url('surat/tugas') ?>"><i class="icon fa fa-circle-o"></i> Surat Tugas</a></li>
-            <li><a class="treeview-item" href="<?php echo base_url('surat/keputusan') ?>"><i class="icon fa fa-circle-o"></i> Surat Keputusan</a></li>
-            <li><a class="treeview-item" href="<?php echo base_url('undangan/masuk') ?>"><i class="icon fa fa-circle-o"></i> Undangan Masuk</a></li>
-            <li><a class="treeview-item" href="<?php echo base_url('undangan/keluar') ?>"><i class="icon fa fa-circle-o"></i> Undangan Keluar</a></li>
+            <?php foreach ($katlap as $row) { ?>
+              <li><a class="treeview-item" href="<?php echo base_url('laporan/detail/').$row['slug'] ?>"><i class="icon fa fa-circle-o"></i> <?= $row['nama'] ?></a></li>
+            <?php } ?>
           </ul>
         </li>
+        <li><a class="app-menu__item" href="<?php echo base_url('pegawai/tambah'); ?>"><i class="app-menu__icon fa fa-plus"></i><span class="app-menu__label">Tambah Pegawai</span></a></li>
+        <li><a class="app-menu__item" href="<?php echo base_url('pegawai') ?>"><i class="app-menu__icon fa fa-list"></i><span class="app-menu__label">List Pegawai</span></a></li>
+        <li><a class="app-menu__item" href="<?php echo base_url('informasi/tambah'); ?>"><i class="app-menu__icon fa fa-plus"></i><span class="app-menu__label">Tambah Informasi</span></a></li>
+        <li><a class="app-menu__item" href="<?php echo base_url('informasi/list') ?>"><i class="app-menu__icon fa fa-list"></i><span class="app-menu__label">List Informasi</span></a></li>
       </ul>
     </aside>

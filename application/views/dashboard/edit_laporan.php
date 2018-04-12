@@ -1,11 +1,11 @@
 <main class="app-content">
       <div class="app-title">
         <div>
-          <h1><i class="fa fa-dashboard"></i> Edit Surat</h1>
+          <h1><i class="fa fa-pencil"></i> Edit Laporan</h1>
         </div>
         <ul class="app-breadcrumb breadcrumb">
           <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
-          <li class="breadcrumb-item"><a href="#">Edit Surat</a></li>
+          <li class="breadcrumb-item"><a href="#">Edit Laporan</a></li>
         </ul>
       </div>
       <div class="row">
@@ -30,7 +30,7 @@
                 <div class="col-md-8">
                   <div class="form-group">
                     <input type="hidden" name="id" value="<?=$da->id?>">
-                    <input type="text" name="nama" class="form-control" placeholder="Judul" value="<?=$da->nama?>">
+                    <input type="text" name="nama" class="form-control" placeholder="Hal" value="<?=$da->nama?>">
                   </div>
                   <div class="form-group">
                     <textarea name="isi" rows="12" class="form-control textboxio"><?=$da->isi?></textarea>
@@ -38,15 +38,15 @@
                 </div>
                 <div class="col-md-4">
                   <div class="form-group">
-                    <label>Nomor Surat</label>
-                    <input type="text" name="nosurat" class="form-control" require value="<?=$da->no_surat?>">
+                    <label>Nomor Laporan</label>
+                    <input type="text" name="nosurat" class="form-control" require value="<?=$da->no_laporan?>">
                   </div>
                   <div class="form-group">
                     <label>Nomor Registrasi</label>
                     <input type="text" name="noregistrasi" class="form-control" require value="<?=$da->no_registrasi?>">
                   </div>
                   <div class="form-group">
-                    <label>Kategori Id</label>
+                    <label>Kategori</label>
                     <select name="kategoriid" class="form-control">
                       <?php foreach($listKategori as $d){?>
                       <?php if($da->kat_id == $d->id){?>
@@ -58,7 +58,7 @@
                   </div>
                   <?php } ?>
                   <div class="form-group">
-                    <input type="submit" name="submit" value="Tambah" class="form-control btn btn-primary">
+                    <input type="submit" name="submit" value="Simpan" class="form-control btn btn-primary">
                   </div>
                 </div>
               </div>
