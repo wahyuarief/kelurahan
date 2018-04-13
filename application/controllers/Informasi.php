@@ -21,7 +21,8 @@ class Informasi extends CI_Controller {
 	}
   public function detail($slug)
 	{
-    $this->crud_model->_read_where('informasi', ['slug'=>$slug])->row_array();
+    $this->data['info'] = $this->crud_model->_read_where('informasi', ['slug'=>$slug])->row_array();
+    $this->data['user'] = $this->crud_model->_read_where('pegawai', ['nip'=>$this->data['info']['peg_id']])->row_array();
     $this->data['page'] = 'home/detail';
     $this->parser->parse('home/layout/wrapper', $this->data);
 	}
@@ -64,7 +65,6 @@ class Informasi extends CI_Controller {
       $this->parser->parse('dashboard/layout/wrapper', $this->data);
     } else {
       $input = array(
-        'peg_id' => $this->session->userdata('pondokbambu')['nip'],
         'judul' => $this->input->post('judul', 1),
         'konten' => $this->input->post('konten', 1),
         'slug' => strtolower(url_title(convert_accented_characters($this->input->post('judul', 1)))),
@@ -86,7 +86,7 @@ class Informasi extends CI_Controller {
       echo '<script>window.history.back();</script>';
     }
   }
-  public function listt()
+  public function list()
   {
     if (!$this->session->has_userdata('pondokbambu')) {
       redirect('login');
