@@ -25,38 +25,18 @@
              </div>
             <?php } ?>
             <form method="post" enctype="multipart/form-data">
-            <?php foreach($listData as $da){ ?>
               <div class="row">
                 <div class="col-md-8">
                   <div class="form-group">
-                    <input type="hidden" name="id" value="<?=$da->id?>">
-                    <input type="text" name="nama" class="form-control" placeholder="Hal" value="<?=$da->nama?>">
+                    <input type="hidden" name="id" value="<?=$informasi['id']?>">
+                    <input type="text" name="judul" class="form-control" placeholder="Hal" value="<?=$informasi['judul']?>">
                   </div>
                   <div class="form-group">
-                    <textarea name="isi" rows="12" class="form-control textboxio"><?=$da->isi?></textarea>
+                    <textarea name="konten" rows="12" class="form-control textboxio"><?=$informasi['konten']?></textarea>
                   </div>
                 </div>
                 <div class="col-md-4">
-                  <div class="form-group">
-                    <label>Nomor Laporan</label>
-                    <input type="text" name="nosurat" class="form-control" require value="<?=$da->no_laporan?>">
-                  </div>
-                  <div class="form-group">
-                    <label>Nomor Registrasi</label>
-                    <input type="text" name="noregistrasi" class="form-control" require value="<?=$da->no_registrasi?>">
-                  </div>
-                  <div class="form-group">
-                    <label>Kategori</label>
-                    <select name="kategoriid" class="form-control">
-                      <?php foreach($listKategori as $d){?>
-                      <?php if($da->kat_id == $d->id){?>
-                        <option value="<?=$da->kat_id?>" selected=""><?=$d->nama?></option>
-                      <?php }else{ ?>
-                        <option value="<?=$d->id?>"><?=$d->nama?></option>
-                        <?php }} ?>
-                    </select>
-                  </div>
-                  <?php } ?>
+                  Dibuat oleh <?= $user['nama_depan']." ".$user['nama_belakang'] ?>
                   <div class="form-group">
                     <input type="submit" name="submit" value="Simpan" class="form-control btn btn-primary">
                   </div>

@@ -6,7 +6,7 @@ class Login extends CI_Controller {
   {
     parent::__construct();
     if ($this->session->has_userdata('pondokbambu')) {
-      redirect(base_url());
+      redirect(base_url('dashboard'));
     }
   }
   public function index()
@@ -24,15 +24,17 @@ class Login extends CI_Controller {
         if ($login->num_rows() <> 0) {
           $this->session->set_userdata('pondokbambu', array(
             'nip' => $data['nip'],
-            'nama' => $data['nama'],
+            'nama' => $data['nama_depan']." ".$data['nama_belakang'],
             'jabatan' => $data['jabatan']
           ));
           redirect(base_url('dashboard'));
         } else {
-          echo "nip / password salah";
+          $this->session->set_flashdata('msg_gagal', 'NIP atau Password Salah');
+          redirect(base_url('login'));
         }
       } else {
-        echo "nip / password salah";
+        $this->session->set_flashdata('msg_gagal', 'NIP atau Password Salah');
+        redirect(base_url('login'));
       }
     }
 	}

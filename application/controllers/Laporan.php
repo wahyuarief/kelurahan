@@ -36,7 +36,7 @@ class Laporan extends CI_Controller {
     if($this->form_validation->run())
     {
       $s = $this->input->post('nama',true);
-      $slug = url_title(convert_accented_characters($s));
+      $slug = strtolower(url_title(convert_accented_characters($s)));
       $d = array(
         'peg_id' => $this->data['nip'],
         'kat_id' => $this->input->post('kategoriid',true),
@@ -68,7 +68,7 @@ class Laporan extends CI_Controller {
     if($this->form_validation->run())
     {
       $s = $this->input->post('nama',true);
-      $slug = url_title(convert_accented_characters($s));
+      $slug = strtolower(url_title(convert_accented_characters($s)));
       $d = array(
         'peg_id' => $this->data['nip'],
         'kat_id' => $this->input->post('kategoriid',true),

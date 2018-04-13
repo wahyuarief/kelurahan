@@ -22,5 +22,6 @@
         <li><a class="app-menu__item" href="<?php echo base_url('pegawai') ?>"><i class="app-menu__icon fa fa-list"></i><span class="app-menu__label">List Pegawai</span></a></li>
         <li><a class="app-menu__item" href="<?php echo base_url('informasi/tambah'); ?>"><i class="app-menu__icon fa fa-plus"></i><span class="app-menu__label">Tambah Informasi</span></a></li>
         <li><a class="app-menu__item" href="<?php echo base_url('informasi/list') ?>"><i class="app-menu__icon fa fa-list"></i><span class="app-menu__label">List Informasi</span></a></li>
+        <li><a class="app-menu__item" href="<?php echo base_url('galeri/tambah'); ?>"><i class="app-menu__icon fa fa-plus"></i><span class="app-menu__label">Tambah Galeri</span></a></li>
       </ul>
     </aside>

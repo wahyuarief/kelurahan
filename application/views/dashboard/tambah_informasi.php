@@ -28,13 +28,14 @@
               <div class="row">
                 <div class="col-md-8">
                   <div class="form-group">
-                    <input type="text" name="nama" class="form-control" placeholder="Judul">
+                    <input type="text" name="judul" class="form-control" placeholder="Judul">
                   </div>
                   <div class="form-group">
-                    <textarea name="isi" rows="12" class="form-control textboxio"></textarea>
+                    <textarea name="konten" rows="12" class="form-control textboxio"></textarea>
                   </div>
                 </div>
                 <div class="col-md-4">
+                  Dibuat oleh <?php echo $this->session->userdata('pondokbambu')['nama'] ?>
                   <div class="form-group">
                     <input type="submit" name="submit" value="Simpan" class="form-control btn btn-primary">
                   </div>

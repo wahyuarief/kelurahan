@@ -21,25 +21,26 @@
               <table class="table table-striped" id="TableListPegawai">
                 <thead>
                   <tr>
-                    <th width="50px">No Laporan</th>
-                    <th width="50px">No Registrasi</th>
-                    <th>Hal</th>
-                    <th width="50px">Tanggal Masuk</th>
+                    <th width="50px">No</th>
+                    <th>Judul</th>
+                    <th width="50px">Pembuat</th>
+                    <th width="50px">Diperbaharui</th>
                     <th width="50px">Opsi</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <?php foreach ($laporan as $row) { ?>
+                  <?php $i=1;foreach ($informasi as $row) {
+                    $user = $this->crud_model->_read_where('pegawai', ['nip'=>$row['peg_id']])->row_array(); ?>
                     <tr>
-                      <td><?php echo $row['no_laporan'] ?></td>
-                      <td><?php echo $row['no_registrasi'] ?></td>
-                      <td><?php echo $row['nama'] ?></td>
+                      <td><?php echo $i++ ?></td>
+                      <td><?php echo $row['judul'] ?></td>
+                      <td><?php echo $user['nama_depan']." ".$user['nama_belakang'] ?></td>
                       <td><?php echo $row['created_at'] ?></td>
                       <td>
                       <div class="btn-group">
-                        <a href="<?=base_url('laporan/lihat/').$row['id']?>" class="form-control btn btn-sm btn-info">Lihat</a>
-                        <a href="<?=base_url('laporan/edit/').$row['id']?>" class="form-control btn btn-sm btn-warning">Edit</a>
-                        <a href="<?=base_url('laporan/delete/').$row['id']?>" class="form-control btn btn-sm btn-danger">Hapus</a>
+                        <a href="<?=base_url('informasi/detail/').$row['slug']?>" class="form-control btn btn-sm btn-info">Lihat</a>
+                        <a href="<?=base_url('informasi/edit/').$row['id']?>" class="form-control btn btn-sm btn-warning">Edit</a>
+                        <a href="<?=base_url('informasi/hapus/').$row['id']?>" class="form-control btn btn-sm btn-danger">Hapus</a>
                       </div>
                       </td>
                     </tr>

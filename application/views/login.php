@@ -21,7 +21,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </div>
       <div class="login-box">
         <form method="POST" class="login-form">
-          <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>SIGN IN</h3>
+          <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>MASUK</h3>
+          <?php if($this->session->flashdata('msg_gagal')){ ?>
+             <script>
+               window.alert("<?php echo $this->session->flashdata('msg_gagal');?>");
+             </script>
+            <?php } ?>
           <div class="form-group">
             <label class="control-label">NIP</label>
             <input name="nip" class="form-control" type="text" placeholder="Nomor Induk Pegawai" required autofocus>
@@ -41,7 +46,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
           </div>
           <div class="form-group btn-container">
-            <button class="btn btn-primary btn-block"><i class="fa fa-sign-in fa-lg fa-fw"></i>SIGN IN</button>
+            <button class="btn btn-primary btn-block"><i class="fa fa-sign-in fa-lg fa-fw"></i>MASUK</button>
           </div>
         </form>
         <form class="forget-form" action="index.html">
