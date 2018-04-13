@@ -5,6 +5,7 @@ class Laporan extends CI_Controller {
   public function __construct()
   {
     parent::__construct();
+    $this->load->library('pdf');
     if (!$this->session->has_userdata('pondokbambu')) {
       redirect('login');
     }
@@ -98,5 +99,79 @@ class Laporan extends CI_Controller {
       $this->session->set_flashdata('msg_berhasil','Data Berhasil Dihapus');
       echo '<script>window.history.back();</script>';
     }
+  }
+  public function lihat()
+  {
+    $id = $this->uri->segment(4);
+    $kat_id = $this->uri->segment(3);
+
+    $dataa = $this->data['surat_masuk'] = $this->crud_model->_read_where('laporan', ['kat_id'=>$kat_id, 'id'=>$id])->result_array();
+    $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+
+    // document informasi
+    $pdf->SetCreator('Web Aplikasi Gudang');
+    $pdf->SetTitle('Laporan Data Barang Keluar');
+    $pdf->SetSubject('Barang Keluar');
+
+    //header Data
+    // $pdf->SetHeaderData('unsada.jpg',20,'Laporan','Surat Masuk',array(203, 58, 44),array(0, 0, 0));
+    // $pdf->SetFooterData(array(255, 255, 255), array(255, 255, 255));
+
+
+    $pdf->setPrintHeader(false);
+    $pdf->setPrintFooter(false);
+
+    $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN,'',PDF_FONT_SIZE_MAIN));
+    $pdf->setFooterFont(Array(PDF_FONT_NAME_MAIN,'',PDF_FONT_SIZE_MAIN));
+
+    $pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
+
+    //set margin
+    $pdf->SetMargins(PDF_MARGIN_LEFT,PDF_MARGIN_TOP,PDF_MARGIN_RIGHT);
+    $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+    $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+
+    $pdf->SetAutoPageBreak(FALSE, PDF_MARGIN_BOTTOM - 5);
+
+    //SET Scaling ImagickPixel
+    $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
+
+    //FONT Subsetting
+    $pdf->setFontSubsetting(true);
+
+    $pdf->SetFont('helvetica','',12,'',true);
+
+    $pdf->AddPage('L');
+
+    $html =
+      '<div></h1>
+        <table><br>';
+        $no = 1;
+        foreach($dataa as $d) {
+          $html .= '<tr>';
+          $html .= '<td colspan="5"><p>No Laporan   : '.$d['no_laporan'].'</p></td>'; 
+          $html .= '<td><p>'.$d['created_at'].'</p></td><br>';           
+          $html .= '</tr>';
+          $html .= '<tr>';          
+          $html .= '<td><p>No Registrasi: '.$d['no_registrasi'].'</p></td>';
+          $html .= '</tr>';
+          $html .= '<tr>';                             
+          $html .= '<td colspan="20"><p>Perihal      : '.$d['nama'].'</p></td><br><br>';          
+          $html .= '</tr><br><br>';                    
+          $html .= '<tr>';
+          $html .= '<td colspan="100"><p>'.$d['isi'].'</p></td>';
+          $html .= '</tr>';
+        }
+
+
+        $html .='
+          <br>
+              <h6 align="right">Hormat Saya</h6><br><br><br>
+              <h6 align="right">Admin</h6>
+          </div>';
+
+    $pdf->writeHTMLCell(0, 0, '', '', $html, 0, 0, 0, true, '', true);
+
+    $pdf->Output('invoice_barang_keluar.pdf','I');
   }
 }

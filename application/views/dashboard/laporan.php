@@ -37,7 +37,7 @@
                       <td><?php echo $row['created_at'] ?></td>
                       <td>
                       <div class="btn-group">
-                        <a href="<?=base_url('laporan/lihat/').$row['id']?>" class="form-control btn btn-sm btn-info">Lihat</a>
+                        <a href="<?=base_url('laporan/lihat/').$row['kat_id'].'/'.$row['id']?>" class="form-control btn btn-sm btn-info">Lihat</a>
                         <a href="<?=base_url('laporan/edit/').$row['id']?>" class="form-control btn btn-sm btn-warning">Edit</a>
                         <a href="<?=base_url('laporan/delete/').$row['id']?>" class="form-control btn btn-sm btn-danger">Hapus</a>
                       </div>
