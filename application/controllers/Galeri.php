@@ -5,6 +5,7 @@ class Galeri extends CI_Controller {
   public function __construct()
   {
     parent::__construct();
+    error_reporting(0);
     $pegawai = $this->crud_model->_read_where('pegawai', ['nip'=>$this->session->userdata('pondokbambu')['nip']])->result_array();
     foreach ($pegawai as $row) {
       $this->data['nip'] = $row['nip'];

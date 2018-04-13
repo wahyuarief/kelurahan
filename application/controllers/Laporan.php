@@ -5,6 +5,7 @@ class Laporan extends CI_Controller {
   public function __construct()
   {
     parent::__construct();
+    error_reporting(0);
     $this->load->library('pdf');
     if (!$this->session->has_userdata('pondokbambu')) {
       redirect('login');
@@ -149,15 +150,15 @@ class Laporan extends CI_Controller {
         $no = 1;
         foreach($dataa as $d) {
           $html .= '<tr>';
-          $html .= '<td colspan="5"><p>No Laporan   : '.$d['no_laporan'].'</p></td>'; 
-          $html .= '<td><p>'.$d['created_at'].'</p></td><br>';           
+          $html .= '<td colspan="5"><p>No Laporan   : '.$d['no_laporan'].'</p></td>';
+          $html .= '<td><p>'.$d['created_at'].'</p></td><br>';
           $html .= '</tr>';
-          $html .= '<tr>';          
+          $html .= '<tr>';
           $html .= '<td><p>No Registrasi: '.$d['no_registrasi'].'</p></td>';
           $html .= '</tr>';
-          $html .= '<tr>';                             
-          $html .= '<td colspan="20"><p>Perihal      : '.$d['nama'].'</p></td><br><br>';          
-          $html .= '</tr><br><br>';                    
+          $html .= '<tr>';
+          $html .= '<td colspan="20"><p>Perihal      : '.$d['nama'].'</p></td><br><br>';
+          $html .= '</tr><br><br>';
           $html .= '<tr>';
           $html .= '<td colspan="100"><p>'.$d['isi'].'</p></td>';
           $html .= '</tr>';

@@ -28,15 +28,12 @@
 	                    <div class="center gap fade-down section-heading">
 	                        <h2 class="main-title">Sedikit Tentang Kami</h2>
 	                        <hr>
-	                        <p>Of an or game gate west face shed. ﻿no great but music too old found arose.</p>
 	                    </div>
 	                </div>
 	            </div>
 	            <div class="row">
 	                <div class="col-md-10 col-md-offset-1 fade-up">
-	                    <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
-
-	                    <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+	                    <p>Pondok Bambu adalah sebuah kelurahan di kecamatan Duren Sawit Jakarta Timur. Kelurahan ini berbatasan dengan Kelurahan Klender di sebelah utara, Kelurahan Cipinang Muara di sebelah barat, Kelurahan Duren Sawit di sebelah timur dan Kelurahan Cipinang Melayu di sebelah selatan.</p>
 	                </div>
 	                <div class="col-md-4 fade-up">
 
@@ -124,157 +121,29 @@
                		<div class="gap"></div>
                     <h2 class="main-title">Informasi Terbaru</h2>
                     <hr>
-                    <p>Of an or game gate west face shed. ﻿no great but music too old found arose.</p>
                 </div>
                 <div class="gap"></div>
-                <div class="row">
-                  <div class="col-md-4">
+                <div class="rows">
+                  <?php if (isset($info)) {
+                    foreach ($info as $row) {
+                      $user = $this->crud_model->_read_where('pegawai', ['nip'=>$row['peg_id']])->row_array(); ?>
+                      <div class="col-md-4">
                       <div class="post">
-                          <div class="post-img-content">
-                              <img src="<?= base_url('assets/') ?>images/portfolio/folio02.jpg" class="img-responsive" />
-                              <div class="overlay">
-                                  <a class="preview btn btn-outlined btn-primary" href="#"><i class="fa fa-link"></i></a>
-                              </div>
+                        <div class="content">
+                          <h2 class="post-title"><?= $row['judul'] ?></h2>
+                          <div class="author">
+                              <i class="fa fa-user"></i> <b><?= $user['nama_depan']." ".$user['nama_belakang'] ?></b> | <i class="fa fa-clock-o"></i> <time datetime="2014-01-20"><?= $row['updated_at'] ?></time>
                           </div>
-                          <div class="content">
-                              <h2 class="post-title">Post Title</h2>
-                              <div class="author">
-                                  <i class="fa fa-user"></i> By <b>Author</b> | <i class="fa fa-clock-o"></i> <time datetime="2014-01-20">April 11th, 2014</time>
-                              </div>
-                              <div>
-                                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                  Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                  unknown printer took a galley of type and scrambled it to make a type specimen book.
-                              </div>
-                              <div class="read-more-wrapper">
-                                  <a href="#" class="btn btn-outlined btn-primary">Read more</a>
-                              </div>
+                          <div>
+                              <?= $row['konten'] ?>
                           </div>
+                          <div class="read-more-wrapper">
+                              <a href="<?= base_url('informasi/detail/').$row['slug'] ?>" class="btn btn-outlined btn-primary">Selengkapnya</a>
+                          </div>
+                        </div>
                       </div>
-                  </div>
-                  <div class="col-md-4">
-                      <div class="post">
-                          <div class="post-img-content">
-                              <img src="<?= base_url('assets/') ?>images/portfolio/folio06.jpg" class="img-responsive" />
-                              <div class="overlay">
-                                  <a class="preview btn btn-outlined btn-primary" href="#"><i class="fa fa-link"></i></a>
-                              </div>
-                          </div>
-                          <div class="content">
-                              <h2 class="post-title">Post Title</h2>
-                              <div class="author">
-                                  <i class="fa fa-user"></i> By <b>Author</b> | <i class="fa fa-clock-o"></i> <time datetime="2014-01-20">April 11th, 2014</time>
-                              </div>
-                              <div>
-                                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                  Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                  unknown printer took a galley of type and scrambled it to make a type specimen book.
-                              </div>
-                              <div class="read-more-wrapper">
-                                  <a href="#" class="btn btn-outlined btn-primary">Read more</a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-md-4">
-                      <div class="post">
-                          <div class="post-img-content">
-                              <img src="<?= base_url('assets/') ?>images/portfolio/folio11.jpg" class="img-responsive" />
-                              <div class="overlay">
-                                  <a class="preview btn btn-outlined btn-primary" href="#"><i class="fa fa-link"></i></a>
-                              </div>
-                          </div>
-                          <div class="content">
-                              <h2 class="post-title">Post Title</h2>
-                              <div class="author">
-                                  <i class="fa fa-user"></i> By <b>Author</b> | <i class="fa fa-clock-o"></i> <time datetime="2014-01-20">April 11th, 2014</time>
-                              </div>
-                              <div>
-                                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                  Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                  unknown printer took a galley of type and scrambled it to make a type specimen book.
-                              </div>
-                              <div class="read-more-wrapper">
-                                  <a href="#" class="btn btn-outlined btn-primary">Read more</a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="gap"></div>
-                <div class="row">
-                  <div class="col-md-4">
-                      <div class="post">
-                          <div class="post-img-content">
-                              <img src="<?= base_url('assets/') ?>images/portfolio/folio02.jpg" class="img-responsive" />
-                              <div class="overlay">
-                                  <a class="preview btn btn-outlined btn-primary" href="#"><i class="fa fa-link"></i></a>
-                              </div>
-                          </div>
-                          <div class="content">
-                              <h2 class="post-title">Post Title</h2>
-                              <div class="author">
-                                  <i class="fa fa-user"></i> By <b>Author</b> | <i class="fa fa-clock-o"></i> <time datetime="2014-01-20">April 11th, 2014</time>
-                              </div>
-                              <div>
-                                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                  Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                  unknown printer took a galley of type and scrambled it to make a type specimen book.
-                              </div>
-                              <div class="read-more-wrapper">
-                                  <a href="#" class="btn btn-outlined btn-primary">Read more</a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-md-4">
-                      <div class="post">
-                          <div class="post-img-content">
-                              <img src="<?= base_url('assets/') ?>images/portfolio/folio06.jpg" class="img-responsive" />
-                              <div class="overlay">
-                                  <a class="preview btn btn-outlined btn-primary" href="#"><i class="fa fa-link"></i></a>
-                              </div>
-                          </div>
-                          <div class="content">
-                              <h2 class="post-title">Post Title</h2>
-                              <div class="author">
-                                  <i class="fa fa-user"></i> By <b>Author</b> | <i class="fa fa-clock-o"></i> <time datetime="2014-01-20">April 11th, 2014</time>
-                              </div>
-                              <div>
-                                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                  Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                  unknown printer took a galley of type and scrambled it to make a type specimen book.
-                              </div>
-                              <div class="read-more-wrapper">
-                                  <a href="#" class="btn btn-outlined btn-primary">Read more</a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-md-4">
-                      <div class="post">
-                          <div class="post-img-content">
-                              <img src="<?= base_url('assets/') ?>images/portfolio/folio11.jpg" class="img-responsive" />
-                              <div class="overlay">
-                                  <a class="preview btn btn-outlined btn-primary" href="#"><i class="fa fa-link"></i></a>
-                              </div>
-                          </div>
-                          <div class="content">
-                              <h2 class="post-title">Post Title</h2>
-                              <div class="author">
-                                  <i class="fa fa-user"></i> By <b>Author</b> | <i class="fa fa-clock-o"></i> <time datetime="2014-01-20">April 11th, 2014</time>
-                              </div>
-                              <div>
-                                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                  Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                  unknown printer took a galley of type and scrambled it to make a type specimen book.
-                              </div>
-                              <div class="read-more-wrapper">
-                                  <a href="#" class="btn btn-outlined btn-primary">Read more</a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
+                    </div>
+                  <?php }} ?>
                 </div>
             </div>
    		</section>
@@ -286,15 +155,14 @@
                 <div class="container">
                 	<div class="gap"></div>
                     <div class="center gap fade-down section-heading">
-                        <h2 class="main-title">Get In Touch</h2>
+                        <h2 class="main-title">Hubungi Kami</h2>
                         <hr>
-                        <p>Of an or game gate west face shed. ﻿no great but music too old found arose.</p>
                     </div>
                     <div class="gap"></div>
                     <div class="row">
                         <div class="col-md-4 fade-up">
-                            <h3>Contact Information</h3>
-                            <p><span class="icon icon-home"></span>Time Square, New York<br/>
+                            <h3>Informasi Kontak</h3>
+                            <p><span class="icon icon-home"></span>Pondok Bambu, Jakarta Timur<br/>
                                 <span class="icon icon-phone"></span>+36 65984 405<br/>
                                 <span class="icon icon-mobile"></span>+36 65984 405<br/>
                                 <span class="icon icon-envelop"></span> <a href="#">email@infinityteam.com</a> <br/>
@@ -304,14 +172,12 @@
                         </div><!-- col -->
 
                         <div class="col-md-8 fade-up">
-                            <h3>Drop Us A Message</h3>
-                            <br>
+                            <h3>Kirim Pesan</h3>
                             <br>
                             <div id="message"></div>
                             <form method="post" action="sendemail.php" id="contactform">
                                 <input type="text" name="name" id="name" placeholder="Name" />
                                 <input type="text" name="email" id="email" placeholder="Email" />
-                                <input type="text" name="website" id="website" placeholder="Website" />
                                 <textarea name="comments" id="comments" placeholder="Comments"></textarea>
                                 <input class="btn btn-outlined btn-primary" type="submit" name="submit" value="Submit" />
                             </form>
