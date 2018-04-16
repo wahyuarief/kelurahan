@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 12, 2018 at 11:50 AM
+-- Generation Time: Apr 16, 2018 at 01:36 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.0.26
 
@@ -21,6 +21,52 @@ SET time_zone = "+00:00";
 --
 -- Database: `kelurahan`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `informasi`
+--
+
+CREATE TABLE `informasi` (
+  `id` int(32) NOT NULL,
+  `peg_id` int(32) NOT NULL,
+  `judul` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `konten` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `informasi`
+--
+
+INSERT INTO `informasi` (`id`, `peg_id`, `judul`, `konten`, `slug`, `created_at`, `updated_at`) VALUES
+(1, 2016230074, 'tentang kami', '<p>kami adalah superhero</p>', 'tentang-kami', '2018-04-13 03:28:16', '0000-00-00 00:00:00'),
+(2, 2016230074, 'visi misi', '<p>menyelesaikan masalah tanpa solusi</p>\r\n<p><br></p>', 'visi-misi', '2018-04-13 03:29:11', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `jadwal`
+--
+
+CREATE TABLE `jadwal` (
+  `id` int(11) NOT NULL,
+  `judul` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `start` datetime NOT NULL,
+  `end` datetime NOT NULL,
+  `deskripsi` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `jadwal`
+--
+
+INSERT INTO `jadwal` (`id`, `judul`, `start`, `end`, `deskripsi`) VALUES
+(1, 'Test Event', '2018-04-17 00:00:00', '2018-05-16 00:00:00', 'ya ini test event'),
+(2, 'New Event', '2018-04-23 00:00:00', '2018-05-23 00:00:00', 'dan ini event baru');
 
 -- --------------------------------------------------------
 
@@ -103,13 +149,26 @@ CREATE TABLE `pegawai` (
 --
 
 INSERT INTO `pegawai` (`id`, `nip`, `nama_depan`, `nama_belakang`, `jabatan`, `keterangan`, `email`, `password`, `foto`, `created_at`, `updated_at`, `last_login`) VALUES
-(1, 2016230074, 'Wahyu', 'Arief', 'IT Staff', 'y\r\n', 'wahyu@hacktivist.or.id', '$2y$10$bwuXAyindhMcHZuO8bxLGOGGdaBjiQDPRpcT.DLKEBh9PNlzVGQTW', '7ed65719053a797e9334efbaee72e9e1.png', '2018-03-13 00:00:00', '2018-04-02 05:03:13', '2018-04-09 11:28:55'),
-(2, 2016230086, 'Muhammad ', 'Zahidin Nur', 'IT Staff', NULL, 'zahidin@gmail.com', '$2y$10$CTjzvmT5B.dxojKZOxsjTeMc4E7.Gwl9slAgX.0lozwGrKSMxzWdO', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2018-04-12 18:36:26'),
+(1, 2016230074, 'Wahyu', 'Arief', 'IT Staff', 'y\r\n', 'wahyu@hacktivist.or.id', '$2y$10$bwuXAyindhMcHZuO8bxLGOGGdaBjiQDPRpcT.DLKEBh9PNlzVGQTW', '7ed65719053a797e9334efbaee72e9e1.png', '2018-03-13 00:00:00', '2018-04-02 05:03:13', '2018-04-13 15:18:21'),
+(2, 2016230086, 'Muhammad ', 'Zahidin Nur', 'IT Staff', NULL, 'zahidin@gmail.com', '$2y$10$CTjzvmT5B.dxojKZOxsjTeMc4E7.Gwl9slAgX.0lozwGrKSMxzWdO', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2018-04-13 14:56:46'),
 (3, 2016230011, 'Udin', 'Sedunia', 'IT Staff', 'woyo', 'udin@gmail.com', '$2y$10$qSXve4SuzRVInXKhckv8BOvo9HzaOZNvVcUO4h0u4p8UrK6lvqzTW', '', '2018-04-02 05:27:33', '0000-00-00 00:00:00', '2018-04-02 21:12:03');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `informasi`
+--
+ALTER TABLE `informasi`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `peg_id` (`peg_id`);
+
+--
+-- Indexes for table `jadwal`
+--
+ALTER TABLE `jadwal`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `kategori_laporan`
@@ -135,6 +194,18 @@ ALTER TABLE `pegawai`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `informasi`
+--
+ALTER TABLE `informasi`
+  MODIFY `id` int(32) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `jadwal`
+--
+ALTER TABLE `jadwal`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `kategori_laporan`

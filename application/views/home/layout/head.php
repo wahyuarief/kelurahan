@@ -22,7 +22,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="<?= base_url('assets/') ?>images/ico/apple-touch-icon-114x114.png">
     <link rel="apple-touch-icon" sizes="72x72" href="<?= base_url('assets/') ?>images/ico/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" href="<?= base_url('assets/') ?>images/ico/apple-touch-icon-57x57.png">
-
+    <link rel="stylesheet" href="<?php echo base_url('assets/') ?>fullcalendar/fullcalendar.min.css" />
     <script type="text/javascript">
     base_url = "<?= base_url('assets/') ?>";
     jQuery(document).ready(function($){
