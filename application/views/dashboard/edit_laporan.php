@@ -42,10 +42,6 @@
                     <input type="text" name="nosurat" class="form-control" require value="<?=$da->no_laporan?>">
                   </div>
                   <div class="form-group">
-                    <label>Nomor Registrasi</label>
-                    <input type="text" name="noregistrasi" class="form-control" require value="<?=$da->no_registrasi?>">
-                  </div>
-                  <div class="form-group">
                     <label>Kategori</label>
                     <select name="kategoriid" class="form-control">
                       <?php foreach($listKategori as $d){?>

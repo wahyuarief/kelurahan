@@ -72,12 +72,12 @@ class Informasi extends CI_Controller {
         'slug' => strtolower(url_title(convert_accented_characters($this->input->post('judul', 1)))),
         'updated_at' => date('Y-m-d H:i:s')
       );
-      $this->crud_model->_create('informasi', $input);
+      $this->crud_model->_update('informasi', $input, ['id'=>$id]);
       $this->session->set_flashdata('msg_berhasil', 'Data berhasil ditambahkan');
-      redirect(base_url('informasi/edit'));
+      echo '<script>window.history.back();</script>';
     }
   }
-  public function hapus()
+  public function hapus($id)
   {
     if (!$this->session->has_userdata('pondokbambu')) {
       redirect('login');

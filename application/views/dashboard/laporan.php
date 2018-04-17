@@ -22,7 +22,6 @@
                 <thead>
                   <tr>
                     <th width="50px">No Laporan</th>
-                    <th width="50px">No Registrasi</th>
                     <th>Hal</th>
                     <th width="50px">Tanggal Masuk</th>
                     <th width="50px">Opsi</th>
@@ -32,7 +31,6 @@
                   <?php foreach ($laporan as $row) { ?>
                     <tr>
                       <td><?php echo $row['no_laporan'] ?></td>
-                      <td><?php echo $row['no_registrasi'] ?></td>
                       <td><?php echo $row['nama'] ?></td>
                       <td><?php echo $row['created_at'] ?></td>
                       <td>

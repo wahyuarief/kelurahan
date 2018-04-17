@@ -40,10 +40,6 @@
                     <input type="text" name="nosurat" class="form-control" require>
                   </div>
                   <div class="form-group">
-                    <label>Nomor Registrasi</label>
-                    <input type="text" name="noregistrasi" class="form-control" require>
-                  </div>
-                  <div class="form-group">
                     <label>Kategori</label>
                     <select name="kategoriid" class="form-control">
                       <option></option>

@@ -33,8 +33,6 @@ class Laporan extends CI_Controller {
     $this->form_validation->set_rules('nama', 'Judul', 'required');
     $this->form_validation->set_rules('isi', 'Isi', 'required|trim');
     $this->form_validation->set_rules('nosurat', 'Nomor Surat', 'required');
-    $this->form_validation->set_rules('noregistrasi', 'Nomor Registrasi', 'required');
-
     if($this->form_validation->run())
     {
       $s = $this->input->post('nama',true);
@@ -45,7 +43,6 @@ class Laporan extends CI_Controller {
         'nama' =>  $this->input->post('nama',true),
         'isi' => $this->input->post('isi',true),
         'no_laporan' => $this->input->post('nosurat',true),
-        'no_registrasi' => $this->input->post('noregistrasi',true),
         'slug' => $slug,
         'created_at' => date('Y-m-d H:i:s')
       );
@@ -65,7 +62,6 @@ class Laporan extends CI_Controller {
     $this->form_validation->set_rules('nama', 'Judul', 'required');
     $this->form_validation->set_rules('isi', 'Isi', 'required|trim');
     $this->form_validation->set_rules('nosurat', 'Nomor Surat', 'required');
-    $this->form_validation->set_rules('noregistrasi', 'Nomor Registrasi', 'required');
 
     if($this->form_validation->run())
     {
@@ -77,7 +73,6 @@ class Laporan extends CI_Controller {
         'nama' =>  $this->input->post('nama',true),
         'isi' => $this->input->post('isi',true),
         'no_laporan' => $this->input->post('nosurat',true),
-        'no_registrasi' => $this->input->post('noregistrasi',true),
         'slug' =>$slug ,
         'updated_at' => date('Y-m-d H:i:s'),
       );
@@ -152,9 +147,6 @@ class Laporan extends CI_Controller {
           $html .= '<tr>';
           $html .= '<td colspan="5"><p>No Laporan   : '.$d['no_laporan'].'</p></td>';
           $html .= '<td><p>'.$d['created_at'].'</p></td><br>';
-          $html .= '</tr>';
-          $html .= '<tr>';
-          $html .= '<td><p>No Registrasi: '.$d['no_registrasi'].'</p></td>';
           $html .= '</tr>';
           $html .= '<tr>';
           $html .= '<td colspan="20"><p>Perihal      : '.$d['nama'].'</p></td><br><br>';

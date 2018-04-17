@@ -15,10 +15,18 @@ class Galeri extends CI_Controller {
     }
     $this->data['katlap'] = $this->crud_model->_read('kategori_laporan')->result_array();
   }
-	public function index()
+  function index()
 	{
-    $this->data['page'] = 'home/galeri';
-    $this->parser->parse('home/layout/wrapper', $this->data);
+    $image_crud = new image_CRUD();
+    $image_crud->set_table('galeri');
+		$image_crud->set_primary_key_field('id');
+		$image_crud->set_url_field('url');
+		$image_crud->set_title_field('title');
+		$image_crud->set_image_path('uploads');
+    $image_crud->unset_upload();
+		$image_crud->unset_delete();
+		$output = $image_crud->render();
+    $this->load->view('home/galeri',$output);
 	}
   public function tambah()
   {

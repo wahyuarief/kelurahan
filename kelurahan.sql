@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 16, 2018 at 01:36 PM
+-- Generation Time: Apr 17, 2018 at 01:22 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.0.26
 
@@ -21,6 +21,28 @@ SET time_zone = "+00:00";
 --
 -- Database: `kelurahan`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `galeri`
+--
+
+CREATE TABLE `galeri` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `url` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `galeri`
+--
+
+INSERT INTO `galeri` (`id`, `title`, `url`) VALUES
+(1, 'Seram Ndivic', '7ed65719053a797e9334efbaee72e9e1.png'),
+(172, 'My house!', 'eb4f-51.jpg'),
+(173, 'Some flowers', 'ac84-52.jpg'),
+(176, 'My garden!', '7ad8-63.jpg');
 
 -- --------------------------------------------------------
 
@@ -44,7 +66,7 @@ CREATE TABLE `informasi` (
 
 INSERT INTO `informasi` (`id`, `peg_id`, `judul`, `konten`, `slug`, `created_at`, `updated_at`) VALUES
 (1, 2016230074, 'tentang kami', '<p>kami adalah superhero</p>', 'tentang-kami', '2018-04-13 03:28:16', '0000-00-00 00:00:00'),
-(2, 2016230074, 'visi misi', '<p>menyelesaikan masalah tanpa solusi</p>\r\n<p><br></p>', 'visi-misi', '2018-04-13 03:29:11', '0000-00-00 00:00:00');
+(2, 2016230074, 'Visi dan Misi', '<strong>Visi</strong><br>Terwujudnya kota Jakarta Timur yang berorientasi kepada pelayanan publik menuju kota berekonomi modern.<br><br><strong>Misi</strong><br>\r\n<ol>\r\n  <li>Mewujudkan Jakarta Timur sebagai kota modern yang terbuka serta konsisten dengan rencana tata ruang wilayah.</li>\r\n  <li>Menjadikan Jakarta sebagai ibu kota yang bebas dari masalah-masalah menahun seperti macet, banjir, pemukiman kumuh, sampah dan lain-lain.</li>\r\n  <li>Membangun budaya<br></li>\r\n</ol>', 'visi-dan-misi', '2018-04-13 03:29:11', '2018-04-17 13:01:45');
 
 -- --------------------------------------------------------
 
@@ -104,8 +126,7 @@ CREATE TABLE `laporan` (
   `kat_id` int(32) NOT NULL,
   `nama` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `isi` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `no_laporan` int(32) DEFAULT NULL,
-  `no_registrasi` int(32) NOT NULL,
+  `no_laporan` varchar(64) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
@@ -115,13 +136,13 @@ CREATE TABLE `laporan` (
 -- Dumping data for table `laporan`
 --
 
-INSERT INTO `laporan` (`id`, `peg_id`, `kat_id`, `nama`, `isi`, `no_laporan`, `no_registrasi`, `slug`, `created_at`, `updated_at`) VALUES
-(1, 2016230074, 1, 'Perintah simpan pinjam dana liburan', 'Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan.', 455657, 12323, 'perintah-simpan-pinjam-dana-liburan', '2018-03-13 17:00:00', '2018-03-13 17:00:00'),
-(3, 2016230086, 3, 'coba', '<p>coba</p>', 1234, 12344, 'coba-1', '2018-03-24 09:53:11', '2018-03-24 09:53:11'),
-(5, 2016230086, 2, 'lomba kemerdekaan', '<p>lomba</p>', 23232, 23232, 'lomba-kemerdekaan', '2018-03-27 11:54:42', '2018-03-27 11:54:42'),
-(7, 2016230086, 1, 'jakarta adalah ibukota replubik indonesia', '<p>jakarta</p>', 222, 111, 'jakarta-adalah-ibukota-replubik-indonesia', '2018-03-27 12:08:21', '2018-03-28 07:35:43'),
-(9, 2016230086, 6, 'sambutan kepada ketua karang taruna', '<p>hari ini adalah sambutan kepada ketua karang taruna</p>', NULL, 2121, 'sambutan-kepada-ketua-karang-taruna', '2018-03-30 08:46:33', '2018-03-30 04:14:05'),
-(10, 2016230086, 4, 'satu dua tutup botol', '<p>ya gini lah projek kontol<br></p>', 32432, 21312, 'satu-dua-tutup-botol', '2018-04-12 03:43:23', '2018-04-12 10:43:23');
+INSERT INTO `laporan` (`id`, `peg_id`, `kat_id`, `nama`, `isi`, `no_laporan`, `slug`, `created_at`, `updated_at`) VALUES
+(1, 2016230074, 1, 'Perintah simpan pinjam dana liburan', 'Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan.', '32/BKD/2018', 'perintah-simpan-pinjam-dana-liburan', '2018-03-13 17:00:00', '2018-03-13 17:00:00'),
+(3, 2016230086, 3, 'coba', '<p>coba</p>', '31/BKD/2018', 'coba-1', '2018-03-24 09:53:11', '2018-03-24 09:53:11'),
+(5, 2016230086, 2, 'lomba kemerdekaan', '<p>lomba</p>', '36/BKD/2018', 'lomba-kemerdekaan', '2018-03-27 11:54:42', '2018-03-27 11:54:42'),
+(7, 2016230086, 1, 'jakarta adalah ibukota replubik indonesia', '<p>jakarta</p>', '38/BKD/2018', 'jakarta-adalah-ibukota-replubik-indonesia', '2018-03-27 12:08:21', '2018-03-28 07:35:43'),
+(9, 2016230086, 6, 'sambutan kepada ketua karang taruna', '<p>hari ini adalah sambutan kepada ketua karang taruna</p>', '34/BKD/2018', 'sambutan-kepada-ketua-karang-taruna', '2018-03-30 08:46:33', '2018-03-30 04:14:05'),
+(10, 2016230086, 4, 'satu dua tutup botol', '<p>ya gini lah projek kontol<br></p>', '39/BKD/2018', 'satu-dua-tutup-botol', '2018-04-12 03:43:23', '2018-04-12 10:43:23');
 
 -- --------------------------------------------------------
 
@@ -156,6 +177,12 @@ INSERT INTO `pegawai` (`id`, `nip`, `nama_depan`, `nama_belakang`, `jabatan`, `k
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `galeri`
+--
+ALTER TABLE `galeri`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `informasi`
@@ -196,10 +223,16 @@ ALTER TABLE `pegawai`
 --
 
 --
+-- AUTO_INCREMENT for table `galeri`
+--
+ALTER TABLE `galeri`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=177;
+
+--
 -- AUTO_INCREMENT for table `informasi`
 --
 ALTER TABLE `informasi`
-  MODIFY `id` int(32) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(32) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `jadwal`
