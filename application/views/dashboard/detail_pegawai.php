@@ -17,7 +17,9 @@
                 <tr>
                   <th width="50px">No Laporan</th>
                   <th>Hal</th>
+                  <th width="50px">No Registrasi</th>
                   <th width="50px">Tanggal Masuk</th>
+                  <th>Hal</th>
                   <th width="50px">Opsi</th>
                 </tr>
               </thead>

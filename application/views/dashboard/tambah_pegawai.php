@@ -35,20 +35,20 @@
                     <label>Nama Pegawai</label><br>
                     <div class="row">
                       <div class="col-md-6">
-                        <input type="text" name="nama_depan" class="form-control" placeholder="Nama Depan">
+                        <input type="text" name="nama_depan" class="form-control" placeholder="Nama Depan" value="<?=set_value('nama_depan')?>">
                       </div>
                       <div class="col-md-6">
-                        <input type="text" name="nama_belakang" class="form-control" placeholder="Nama Belakang">
+                        <input type="text" name="nama_belakang" class="form-control" placeholder="Nama Belakang" value="<?=set_value('nama_belakang')?>">
                       </div>
                     </div>
                   </div>
                   <div class="form-group">
                     <label>Jabatan</label>
-                    <input type="text" name="jabatan" class="form-control">
+                    <input type="text" name="jabatan" class="form-control" value="<?=set_value('jabatan')?>">
                   </div>
                   <div class="form-group">
                     <label>Keterangan</label>
-                    <textarea name="keterangan" rows="2" class="form-control"></textarea>
+                    <textarea name="keterangan" rows="2" class="form-control"><?=set_value('keterangan')?></textarea>
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -58,7 +58,7 @@
                   </div>
                   <div class="form-group">
                     <label>Email</label>
-                    <input type="email" name="email" class="form-control">
+                    <input type="email" name="email" class="form-control" value="<?=set_value('email')?>">
                   </div>
                   <div class="form-group">
                     <label>Password</label>

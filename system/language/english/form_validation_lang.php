@@ -4,19 +4,19 @@
  *
  * An open source application development framework for PHP
  *
- * This content is released under the MIT License (MIT)
+ * This content is released under Kolom MIT License (MIT)
  *
  * Copyright (c) 2014 - 2018, British Columbia Institute of Technology
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
+ * of this software and associated documentation files (Kolom "Software"), to deal
+ * in Kolom Software without restriction, including without limitation Kolom rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
+ * copies of Kolom Software, and to permit persons to whom Kolom Software is
+ * furnished to do so, subject to Kolom following conditions:
  *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
+ * Kolom above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of Kolom Software.
  *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -37,32 +37,32 @@
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-$lang['form_validation_required']		= 'The {field} field is required.';
-$lang['form_validation_isset']			= 'The {field} field must have a value.';
-$lang['form_validation_valid_email']		= 'The {field} field must contain a valid email address.';
-$lang['form_validation_valid_emails']		= 'The {field} field must contain all valid email addresses.';
-$lang['form_validation_valid_url']		= 'The {field} field must contain a valid URL.';
-$lang['form_validation_valid_ip']		= 'The {field} field must contain a valid IP.';
-$lang['form_validation_min_length']		= 'The {field} field must be at least {param} characters in length.';
-$lang['form_validation_max_length']		= 'The {field} field cannot exceed {param} characters in length.';
-$lang['form_validation_exact_length']		= 'The {field} field must be exactly {param} characters in length.';
-$lang['form_validation_alpha']			= 'The {field} field may only contain alphabetical characters.';
-$lang['form_validation_alpha_numeric']		= 'The {field} field may only contain alpha-numeric characters.';
-$lang['form_validation_alpha_numeric_spaces']	= 'The {field} field may only contain alpha-numeric characters and spaces.';
-$lang['form_validation_alpha_dash']		= 'The {field} field may only contain alpha-numeric characters, underscores, and dashes.';
-$lang['form_validation_numeric']		= 'The {field} field must contain only numbers.';
-$lang['form_validation_is_numeric']		= 'The {field} field must contain only numeric characters.';
-$lang['form_validation_integer']		= 'The {field} field must contain an integer.';
-$lang['form_validation_regex_match']		= 'The {field} field is not in the correct format.';
-$lang['form_validation_matches']		= 'The {field} field does not match the {param} field.';
-$lang['form_validation_differs']		= 'The {field} field must differ from the {param} field.';
-$lang['form_validation_is_unique'] 		= 'The {field} field must contain a unique value.';
-$lang['form_validation_is_natural']		= 'The {field} field must only contain digits.';
-$lang['form_validation_is_natural_no_zero']	= 'The {field} field must only contain digits and must be greater than zero.';
-$lang['form_validation_decimal']		= 'The {field} field must contain a decimal number.';
-$lang['form_validation_less_than']		= 'The {field} field must contain a number less than {param}.';
-$lang['form_validation_less_than_equal_to']	= 'The {field} field must contain a number less than or equal to {param}.';
-$lang['form_validation_greater_than']		= 'The {field} field must contain a number greater than {param}.';
-$lang['form_validation_greater_than_equal_to']	= 'The {field} field must contain a number greater than or equal to {param}.';
-$lang['form_validation_error_message_not_set']	= 'Unable to access an error message corresponding to your field name {field}.';
-$lang['form_validation_in_list']		= 'The {field} field must be one of: {param}.';
+$lang['form_validation_required']		= 'Kolom {field} Harus Diisi.';
+$lang['form_validation_isset']			= 'Kolom {field} Harus Memiliki Nilai.';
+$lang['form_validation_valid_email']		= 'Kolom {field} Harus Berisi Alamat Email Yang Valid.';
+$lang['form_validation_valid_emails']		= 'Kolo {field} Harus Berisi Semua Alamat Email Yang Valid.';
+$lang['form_validation_valid_url']		= 'Kolom {field} Harus Berisi URL Yang Valid.';
+$lang['form_validation_valid_ip']		= 'Kolom {field} Harus Berisi IP Yang Valid';
+$lang['form_validation_min_length']		= 'Kolom {field} Harus Setidaknya {param} Karakter.';
+$lang['form_validation_max_length']		= 'Kolom {field} Tidak Dapat Melebihi {param} Karakter.';
+$lang['form_validation_exact_length']		= 'Kolom {field} Harus Tepat {param} Karakter.';
+$lang['form_validation_alpha']			= 'Kolom {field} Hanya Dapat Berisi Karakter Abjad.';
+$lang['form_validation_alpha_numeric']		= 'Kolom {field} Hanya Dapat Berisi Karakter Alpa-numeric.';
+$lang['form_validation_alpha_numeric_spaces']	= 'Kolom {field} Hanya Dapat Berisi Alpha-numeric Karakter Dan Spasi.';
+$lang['form_validation_alpha_dash']		= 'Kolom {field} Hanya Dapat Berisi Alfanumerik Karakter, Garis Bawah, Dan Strip.';
+$lang['form_validation_numeric']		= 'Kolom {field} Hanya Berisi Angka Saja.';
+$lang['form_validation_is_numeric']		= 'Kolom {field} Harus Berisi Karakter Numerik.';
+$lang['form_validation_integer']		= 'Kolom {field} Harus Berisi Sebuah Integer.';
+$lang['form_validation_regex_match']		= 'Kolom {field} Tidak Dalam Format Yang Benar.';
+$lang['form_validation_matches']		= 'Kolom {field} Tidak Cocok Dengan Kolom {param}.';
+$lang['form_validation_differs']		= 'Kolom {field} Harus Berbeda Dari Kolom {param}.';
+$lang['form_validation_is_unique'] 		= 'Kolom {field} Harus Berisi Nilai Yang Uniik.';
+$lang['form_validation_is_natural']		= 'Kolom {field} Harus Berisi Hanya Angka Positif.';
+$lang['form_validation_is_natural_no_zero']	= 'Kolom {field} Harus Berisi Angka Lebih Besar Dari Nol.';
+$lang['form_validation_decimal']		= 'Kolom {field} Harus Berisi Angka Desimal.';
+$lang['form_validation_less_than']		= 'Kolom {field} Harus Berisi Angka Kurang Dari {param}.';
+$lang['form_validation_less_than_equal_to']	= 'Kolom {field} Harus Berisi Angka Yang Kurang Dari Atau Sama Dengan {param}.';
+$lang['form_validation_greater_than']		= 'Kolom {field} Harus Berisi Jumlah Yang Lebih Besar Dari {param}.';
+$lang['form_validation_greater_than_equal_to']	= 'Kolom {field} Harus Berisi Angka Yang Lebih Besar Atau Sama Dengan {param}.';
+$lang['form_validation_error_message_not_set']	= 'Tidak Dapat Mengakses Pesan Kesalahan Yang Sesuai Dengan Kolom {field}.';
+$lang['form_validation_in_list']		= 'Kolom {field} Haru Mejadi Salah Satu: {param}.';

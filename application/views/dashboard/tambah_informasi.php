@@ -28,10 +28,10 @@
               <div class="row">
                 <div class="col-md-8">
                   <div class="form-group">
-                    <input type="text" name="judul" class="form-control" placeholder="Judul">
+                    <input type="text" name="judul" class="form-control" placeholder="Judul" value="<?=set_value('judul')?>">
                   </div>
                   <div class="form-group">
-                    <textarea name="konten" rows="12" class="form-control textboxio"></textarea>
+                    <textarea name="konten" rows="12" class="form-control textboxio"><?=set_value('konten')?></textarea>
                   </div>
                 </div>
                 <div class="col-md-4">

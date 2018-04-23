@@ -28,16 +28,20 @@
               <div class="row">
                 <div class="col-md-8">
                   <div class="form-group">
-                    <input type="text" name="nama" class="form-control" placeholder="Hal">
+                    <input type="text" name="nama" class="form-control" placeholder="Hal" value="<?=set_value('nama')?>">
                   </div>
                   <div class="form-group">
-                    <textarea name="isi" rows="12" class="form-control textboxio"></textarea>
+                    <textarea name="isi" rows="12" class="form-control textboxio"><?=set_value('isi')?></textarea>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="form-group">
                     <label>Nomor Laporan</label>
-                    <input type="text" name="nosurat" class="form-control" require>
+                    <input type="text" name="nosurat" class="form-control" require value="<?=set_value('nosurat')?>">
+                  </div>
+                  <div class="form-group">
+                    <label>Nomor Registrasi</label>
+                    <input type="text" name="noregistrasi" class="form-control" require value="<?=set_value('noregistrasi')?>">
                   </div>
                   <div class="form-group">
                     <label>Kategori</label>
