@@ -16,7 +16,7 @@
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tentang Kami</a>
                       <ul class="dropdown-menu">
                         <li><a href="<?= base_url('informasi/detail/tentang-kami') ?>">Kelurahan Pondok Bambu</a></li>
-                        <li><a href="<?= base_url('informasi/detail/visi-misi') ?>">Visi dan Misi</a></li>
+                        <li><a href="<?= base_url('informasi/detail/visi-dan-misi') ?>">Visi dan Misi</a></li>
                       </ul>
                     </li>
                     <li><a href="<?= base_url('jadwal') ?>">Jadwal</a></li>

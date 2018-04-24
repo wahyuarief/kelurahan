@@ -1,11 +1,10 @@
 <main class="app-content">
       <div class="app-title">
         <div>
-          <h1><i class="fa fa-files-o"></i> Informasi</h1>
+          <h1><i class="fa fa-files-o"></i> Berita</h1>
         </div>
         <ul class="app-breadcrumb breadcrumb">
-          <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
-          <li class="breadcrumb-item"><a href="#">Informasi</a></li>
+          <a href="<?php echo base_url('informasi/tambah'); ?>" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i> Tambah Berita</a>
         </ul>
       </div>
       <div class="row">

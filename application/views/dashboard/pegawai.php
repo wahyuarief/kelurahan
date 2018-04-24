@@ -4,8 +4,7 @@
           <h1><i class="fa fa-list"></i> List Pegawai</h1>
         </div>
         <ul class="app-breadcrumb breadcrumb">
-          <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
-          <li class="breadcrumb-item"><a href="#">List Pegawai</a></li>
+          <a href="<?php echo base_url('pegawai/tambah'); ?>" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i> Tambah Pegawai</a>
         </ul>
       </div>
       <div class="row">

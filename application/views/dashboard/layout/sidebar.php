@@ -10,16 +10,6 @@
       </div>
       <ul class="app-menu">
         <li><a class="app-menu__item" href="<?php echo base_url('dashboard') ?>"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Dashboard</span></a></li>
-        <li class="treeview">
-          <a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-plus"></i><span class="app-menu__label">Tambah Data</span><i class="treeview-indicator fa fa-angle-right"></i></a>
-          <ul class="treeview-menu">
-            <li><a class="app-menu__item" href="<?php echo base_url('pegawai/tambah'); ?>"><i class="app-menu__icon fa fa-plus"></i><span class="app-menu__label">Tambah Pegawai</span></a></li>
-            <li><a class="app-menu__item" href="<?php echo base_url('laporan/tambah'); ?>"><i class="app-menu__icon fa fa-plus"></i><span class="app-menu__label">Tambah Laporan</span></a></li>
-            <li><a class="app-menu__item" href="<?php echo base_url('informasi/tambah'); ?>"><i class="app-menu__icon fa fa-plus"></i><span class="app-menu__label">Tambah Informasi</span></a></li>
-            <li><a class="app-menu__item" href="<?php echo base_url('galeri/tambah'); ?>"><i class="app-menu__icon fa fa-plus"></i><span class="app-menu__label">Tambah Galeri</span></a></li>
-            <li><a class="app-menu__item" href="<?php echo base_url('jadwal/tambah'); ?>"><i class="app-menu__icon fa fa-plus"></i><span class="app-menu__label">Tambah Jadwal</span></a></li>
-          </ul>
-        </li>
         <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-files-o"></i><span class="app-menu__label">Laporan</span><i class="treeview-indicator fa fa-angle-right"></i></a>
           <ul class="treeview-menu">
             <?php foreach ($katlap as $row) { ?>
@@ -27,7 +17,9 @@
             <?php } ?>
           </ul>
         </li>
-        <li><a class="app-menu__item" href="<?php echo base_url('pegawai') ?>"><i class="app-menu__icon fa fa-list"></i><span class="app-menu__label">Daftar Pegawai</span></a></li>
-        <li><a class="app-menu__item" href="<?php echo base_url('informasi/list') ?>"><i class="app-menu__icon fa fa-list"></i><span class="app-menu__label">Daftar Berita</span></a></li>
+        <li><a class="app-menu__item" href="<?php echo base_url('pegawai') ?>"><i class="app-menu__icon fa fa-users"></i><span class="app-menu__label">Pegawai</span></a></li>
+        <li><a class="app-menu__item" href="<?php echo base_url('informasi/list') ?>"><i class="app-menu__icon fa fa-file"></i><span class="app-menu__label">Berita</span></a></li>
+        <li><a class="app-menu__item" href="<?php echo base_url('jadwal/list') ?>"><i class="app-menu__icon fa fa-calendar"></i><span class="app-menu__label">Jadwal</span></a></li>
+        <li><a class="app-menu__item" href="<?php echo base_url('galeri/list') ?>"><i class="app-menu__icon fa fa-image"></i><span class="app-menu__label">Galeri</span></a></li>
       </ul>
     </aside>

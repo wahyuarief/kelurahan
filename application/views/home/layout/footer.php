@@ -2,7 +2,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6">
-                        &copy; 2014 <a target="_blank" href="http://www.distinctivethemes.com" title="Premium Themes and Templates">Distinctive Themes</a>. All Rights Reserved.
+                        &copy; <script type='text/javascript'>var creditsyear = new Date();document.write(creditsyear.getFullYear());</script> <a target="_blank" href="<?php echo base_url() ?>">Kelurahan Pondok Bambu</a>. Developed by <a href="http://www.hacktivist.or.id">Indonesian Hacktivist</a>.
                     </div>
                     <div class="col-sm-6">
                         <ul class="pull-right">

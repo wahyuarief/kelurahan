@@ -135,7 +135,7 @@
                               <i class="fa fa-user"></i> <b><?= $user['nama_depan']." ".$user['nama_belakang'] ?></b> | <i class="fa fa-clock-o"></i> <time datetime="2014-01-20"><?= $row['updated_at'] ?></time>
                           </div>
                           <div>
-                              <?= $row['konten'] ?>
+                              <?= strip_tags(substr($row['konten'],0,120)) ?>
                           </div>
                           <div class="read-more-wrapper">
                               <a href="<?= base_url('informasi/detail/').$row['slug'] ?>" class="btn btn-outlined btn-primary">Selengkapnya</a>

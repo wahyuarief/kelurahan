@@ -19,7 +19,6 @@
 <div id="content-wrapper">
 <section id="blog" class="white">
 <div class="container">
-<div class="gap"></div>
 <div class="row">
 <aside class="col-sm-4 col-sm-push-8">
 
@@ -71,7 +70,6 @@
   <div class="entry-meta">
       <span><i class="fa fa-user"></i> <a href="#"> <?= $user['nama_depan']." ".$user['nama_belakang'] ?></a></span>
       <span><i class="fa fa-clock-o"></i> <?= $info['updated_at'] ?></span>
-      <span><i class="fa fa-comment"></i> <a href="blog-item.html#comments"><span class="counter">14</span> Comments</a></span>
   </div>
   <hr>
   <p class="lead">
