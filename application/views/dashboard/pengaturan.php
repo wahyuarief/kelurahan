@@ -1,11 +1,11 @@
 <main class="app-content">
       <div class="app-title">
         <div>
-          <h1><i class="fa fa-plus"></i> Tambah Laporan</h1>
+          <h1><i class="fa fa-plus"></i> Tambah Pegawai</h1>
         </div>
         <ul class="app-breadcrumb breadcrumb">
           <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
-          <li class="breadcrumb-item"><a href="#">Tambah Laporan</a></li>
+          <li class="breadcrumb-item"><a href="#">Tambah Pegawai</a></li>
         </ul>
       </div>
       <div class="row">
@@ -26,27 +26,18 @@
             <?php } ?>
             <form method="post" enctype="multipart/form-data">
               <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-6">
                   <div class="form-group">
-                    <input type="text" name="nama" class="form-control" placeholder="Hal" value="<?=set_value('nama')?>">
+                    <label>Judul Website</label>
+                    <input type="text" name="judul" class="form-control" value="<?=$pengaturan['judul']?>">
                   </div>
                   <div class="form-group">
-                    <textarea name="isi" rows="12" class="form-control textboxio"><?=set_value('isi')?></textarea>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="form-group">
-                    <label>Nomor Laporan</label>
-                    <input type="text" name="nosurat" class="form-control" require value="<?=set_value('nosurat')?>">
+                    <label>Deskripsi Website</label>
+                    <textarea name="deskripsi" rows="2" class="form-control"><?=$pengaturan['deskripsi']?></textarea>
                   </div>
                   <div class="form-group">
-                    <label>Kategori</label>
-                    <select name="kategoriid" class="form-control">
-                      <option></option>
-                      <?php foreach($listKategori as $d){?>
-                      <option value="<?=$d->id?>"><?=$d->nama?></option>
-                      <?php } ?>
-                    </select>
+                    <label>Logo Website</label>
+                    <input type="file" name="logo" class="form-control">
                   </div>
                   <div class="form-group">
                     <input type="submit" name="submit" value="Simpan" class="form-control btn btn-primary">

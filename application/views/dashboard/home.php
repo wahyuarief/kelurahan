@@ -10,7 +10,7 @@
       </div>
       <div class="row">
         <div class="col-md-6 col-lg-3">
-          <div class="widget-small primary coloured-icon"><i class="icon fa fa-users fa-3x"></i>
+          <div class="widget-small primary coloured-icon"><i class="icon fa fa-indent fa-3x"></i>
             <div class="info">
               <h6>Surat Masuk</h6>
               <p><b><?php echo count($surat_masuk) ?></b></p>
@@ -18,7 +18,7 @@
           </div>
         </div>
         <div class="col-md-6 col-lg-3">
-          <div class="widget-small info coloured-icon"><i class="icon fa fa-thumbs-o-up fa-3x"></i>
+          <div class="widget-small info coloured-icon"><i class="icon fa fa-outdent fa-3x"></i>
             <div class="info">
               <h6>Surat Keluar</h6>
               <p><b><?php echo count($surat_keluar) ?></b></p>
@@ -26,7 +26,7 @@
           </div>
         </div>
         <div class="col-md-6 col-lg-3">
-          <div class="widget-small warning coloured-icon"><i class="icon fa fa-files-o fa-3x"></i>
+          <div class="widget-small warning coloured-icon"><i class="icon fa fa-tasks fa-3x"></i>
             <div class="info">
               <h6>Surat Tugas</h6>
               <p><b><?php echo count($surat_tugas) ?></b></p>
@@ -34,7 +34,7 @@
           </div>
         </div>
         <div class="col-md-6 col-lg-3">
-          <div class="widget-small danger coloured-icon"><i class="icon fa fa-star fa-3x"></i>
+          <div class="widget-small danger coloured-icon"><i class="icon fa fa-gavel fa-3x"></i>
             <div class="info">
               <h6>Surat Keputusan</h6>
               <p><b><?php echo count($surat_keputusan) ?></b></p>
@@ -50,7 +50,7 @@
           </div>
         </div>
       </div>
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-md-6">
           <div class="tile">
             <div class="tile-title">Surat Masuk</div>
@@ -187,5 +187,5 @@
             <a href="#">Selengkapnya</a>
           </div>
         </div>
-      </div>
+      </div> -->
     </main>

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Apr 17, 2018 at 01:22 PM
--- Server version: 10.1.30-MariaDB
--- PHP Version: 7.0.26
+-- Host: 127.0.0.1
+-- Generation Time: 22 Mei 2018 pada 10.13
+-- Versi Server: 10.1.30-MariaDB
+-- PHP Version: 5.6.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `galeri`
+-- Struktur dari tabel `galeri`
 --
 
 CREATE TABLE `galeri` (
@@ -35,7 +35,7 @@ CREATE TABLE `galeri` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `galeri`
+-- Dumping data untuk tabel `galeri`
 --
 
 INSERT INTO `galeri` (`id`, `title`, `url`) VALUES
@@ -47,7 +47,7 @@ INSERT INTO `galeri` (`id`, `title`, `url`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `informasi`
+-- Struktur dari tabel `informasi`
 --
 
 CREATE TABLE `informasi` (
@@ -61,17 +61,17 @@ CREATE TABLE `informasi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `informasi`
+-- Dumping data untuk tabel `informasi`
 --
 
 INSERT INTO `informasi` (`id`, `peg_id`, `judul`, `konten`, `slug`, `created_at`, `updated_at`) VALUES
-(1, 2016230074, 'tentang kami', '<p>kami adalah superhero</p>', 'tentang-kami', '2018-04-13 03:28:16', '0000-00-00 00:00:00'),
-(2, 2016230074, 'Visi dan Misi', '<strong>Visi</strong><br>Terwujudnya kota Jakarta Timur yang berorientasi kepada pelayanan publik menuju kota berekonomi modern.<br><br><strong>Misi</strong><br>\r\n<ol>\r\n  <li>Mewujudkan Jakarta Timur sebagai kota modern yang terbuka serta konsisten dengan rencana tata ruang wilayah.</li>\r\n  <li>Menjadikan Jakarta sebagai ibu kota yang bebas dari masalah-masalah menahun seperti macet, banjir, pemukiman kumuh, sampah dan lain-lain.</li>\r\n  <li>Membangun budaya<br></li>\r\n</ol>', 'visi-dan-misi', '2018-04-13 03:29:11', '2018-04-17 13:01:45');
+(1, 2016230074, 'Tentang Kami', 'Pondok Bambu adalah sebuah kelurahan di kecamatan Duren Sawit Jakarta Timur. Kelurahan ini berbatasan dengan Kelurahan Klender di sebelah utara, Kelurahan Cipinang Muara di sebelah barat, Kelurahan Duren Sawit di sebelah timur dan Kelurahan Cipinang Melayu di sebelah selatan.', 'tentang-kami', '2018-04-13 03:28:16', '2018-05-22 10:12:21'),
+(2, 2016230074, 'Visi dan Misi', '<strong>Visi</strong><br>Terwujudnya kota Jakarta Timur yang berorientasi kepada pelayanan publik menuju kota berekonomi modern.<br><br><strong>Misi</strong><br>\r\n<ol>\r\n  <li>Mewujudkan Jakarta Timur sebagai kota modern yang terbuka serta konsisten dengan rencana tata ruang wilayah.</li>\r\n  <li>Menjadikan Jakarta sebagai ibu kota yang bebas dari masalah-masalah menahun seperti macet, banjir, pemukiman kumuh, sampah dan lain-lain.</li>\r\n  <li>Membangun budaya masyarakat perkotaan yang toleran, tetapi juga sekaligus memiliki kesadaran dalam memelihara kota.</li>\r\n  <li>Membangun pemerintahan yang bersih dan transparan serta berorientasi pada pelayanan publik.<br></li>\r\n</ol>', 'visi-dan-misi', '2018-04-13 03:29:11', '2018-05-22 09:44:18');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `jadwal`
+-- Struktur dari tabel `jadwal`
 --
 
 CREATE TABLE `jadwal` (
@@ -83,7 +83,7 @@ CREATE TABLE `jadwal` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `jadwal`
+-- Dumping data untuk tabel `jadwal`
 --
 
 INSERT INTO `jadwal` (`id`, `judul`, `start`, `end`, `deskripsi`) VALUES
@@ -93,7 +93,7 @@ INSERT INTO `jadwal` (`id`, `judul`, `start`, `end`, `deskripsi`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kategori_laporan`
+-- Struktur dari tabel `kategori_laporan`
 --
 
 CREATE TABLE `kategori_laporan` (
@@ -103,7 +103,7 @@ CREATE TABLE `kategori_laporan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `kategori_laporan`
+-- Dumping data untuk tabel `kategori_laporan`
 --
 
 INSERT INTO `kategori_laporan` (`id`, `nama`, `slug`) VALUES
@@ -117,7 +117,7 @@ INSERT INTO `kategori_laporan` (`id`, `nama`, `slug`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `laporan`
+-- Struktur dari tabel `laporan`
 --
 
 CREATE TABLE `laporan` (
@@ -133,7 +133,7 @@ CREATE TABLE `laporan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `laporan`
+-- Dumping data untuk tabel `laporan`
 --
 
 INSERT INTO `laporan` (`id`, `peg_id`, `kat_id`, `nama`, `isi`, `no_laporan`, `slug`, `created_at`, `updated_at`) VALUES
@@ -147,7 +147,19 @@ INSERT INTO `laporan` (`id`, `peg_id`, `kat_id`, `nama`, `isi`, `no_laporan`, `s
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pegawai`
+-- Struktur dari tabel `menu`
+--
+
+CREATE TABLE `menu` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(64) NOT NULL,
+  `jenis` varchar(32) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pegawai`
 --
 
 CREATE TABLE `pegawai` (
@@ -166,13 +178,32 @@ CREATE TABLE `pegawai` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `pegawai`
+-- Dumping data untuk tabel `pegawai`
 --
 
 INSERT INTO `pegawai` (`id`, `nip`, `nama_depan`, `nama_belakang`, `jabatan`, `keterangan`, `email`, `password`, `foto`, `created_at`, `updated_at`, `last_login`) VALUES
-(1, 2016230074, 'Wahyu', 'Arief', 'IT Staff', 'y\r\n', 'wahyu@hacktivist.or.id', '$2y$10$bwuXAyindhMcHZuO8bxLGOGGdaBjiQDPRpcT.DLKEBh9PNlzVGQTW', '7ed65719053a797e9334efbaee72e9e1.png', '2018-03-13 00:00:00', '2018-04-02 05:03:13', '2018-04-13 15:18:21'),
+(1, 2016230074, 'Super', 'Admin', 'IT Staff', 'y\r\n', 'wahyu@hacktivist.or.id', '$2y$10$bwuXAyindhMcHZuO8bxLGOGGdaBjiQDPRpcT.DLKEBh9PNlzVGQTW', '7ed65719053a797e9334efbaee72e9e1.png', '2018-03-13 00:00:00', '2018-04-02 05:03:13', '2018-05-22 14:37:55'),
 (2, 2016230086, 'Muhammad ', 'Zahidin Nur', 'IT Staff', NULL, 'zahidin@gmail.com', '$2y$10$CTjzvmT5B.dxojKZOxsjTeMc4E7.Gwl9slAgX.0lozwGrKSMxzWdO', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2018-04-13 14:56:46'),
 (3, 2016230011, 'Udin', 'Sedunia', 'IT Staff', 'woyo', 'udin@gmail.com', '$2y$10$qSXve4SuzRVInXKhckv8BOvo9HzaOZNvVcUO4h0u4p8UrK6lvqzTW', '', '2018-04-02 05:27:33', '0000-00-00 00:00:00', '2018-04-02 21:12:03');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pengaturan`
+--
+
+CREATE TABLE `pengaturan` (
+  `judul` varchar(255) NOT NULL,
+  `deskripsi` varchar(255) NOT NULL,
+  `logo` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `pengaturan`
+--
+
+INSERT INTO `pengaturan` (`judul`, `deskripsi`, `logo`) VALUES
+('Pondok Bambu', 'Cara buat web', '');
 
 --
 -- Indexes for dumped tables
@@ -210,6 +241,12 @@ ALTER TABLE `laporan`
   ADD PRIMARY KEY (`id`),
   ADD KEY `kategori_id` (`kat_id`),
   ADD KEY `peg_id` (`peg_id`);
+
+--
+-- Indexes for table `menu`
+--
+ALTER TABLE `menu`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `pegawai`
@@ -251,6 +288,12 @@ ALTER TABLE `kategori_laporan`
 --
 ALTER TABLE `laporan`
   MODIFY `id` int(32) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `menu`
+--
+ALTER TABLE `menu`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `pegawai`

@@ -18,8 +18,7 @@
           </ul>
         </li>
         <li><a class="app-menu__item" href="<?php echo base_url('pegawai') ?>"><i class="app-menu__icon fa fa-users"></i><span class="app-menu__label">Pegawai</span></a></li>
-        <li><a class="app-menu__item" href="<?php echo base_url('informasi/list') ?>"><i class="app-menu__icon fa fa-file"></i><span class="app-menu__label">Berita</span></a></li>
-        <li><a class="app-menu__item" href="<?php echo base_url('jadwal/list') ?>"><i class="app-menu__icon fa fa-calendar"></i><span class="app-menu__label">Jadwal</span></a></li>
-        <li><a class="app-menu__item" href="<?php echo base_url('galeri/list') ?>"><i class="app-menu__icon fa fa-image"></i><span class="app-menu__label">Galeri</span></a></li>
+        <li><a class="app-menu__item" href="<?php echo base_url('informasi/daftar') ?>"><i class="app-menu__icon fa fa-file"></i><span class="app-menu__label">Berita</span></a></li>
+        <li><a class="app-menu__item" href="<?php echo base_url('pengaturan') ?>"><i class="app-menu__icon fa fa-cogs"></i><span class="app-menu__label">Pengaturan</span></a></li>
       </ul>
     </aside>

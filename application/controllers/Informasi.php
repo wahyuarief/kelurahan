@@ -88,7 +88,7 @@ class Informasi extends CI_Controller {
       echo '<script>window.history.back();</script>';
     }
   }
-  public function list()
+  public function daftar()
   {
     if (!$this->session->has_userdata('pondokbambu')) {
       redirect('login');

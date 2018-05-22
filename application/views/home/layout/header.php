@@ -19,8 +19,6 @@
                         <li><a href="<?= base_url('informasi/detail/visi-dan-misi') ?>">Visi dan Misi</a></li>
                       </ul>
                     </li>
-                    <li><a href="<?= base_url('jadwal') ?>">Jadwal</a></li>
-                    <li><a href="<?= base_url('galeri') ?>">Galeri</a></li>
                     <li><a href="<?= base_url('login') ?>">Login</a></li>
                 </ul>
             </div>
