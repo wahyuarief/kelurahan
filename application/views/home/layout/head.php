@@ -28,9 +28,9 @@
     jQuery(document).ready(function($){
 	'use strict';
       	jQuery('body').backstretch([
-	        base_url + "images/bg/bg1.jpg",
-	        base_url + "images/bg/bg2.jpg",
-	        base_url + "images/bg/bg3.jpg"
+	        base_url + "images/bg/bg1.jpeg",
+	        base_url + "images/bg/bg2.jpeg",
+	        base_url + "images/bg/bg3.jpeg"
 	    ], {duration: 5000, fade: 500, centeredY: true });
 
 		$("#mapwrapper").gMap({ controls: false,

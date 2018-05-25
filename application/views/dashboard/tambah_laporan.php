@@ -36,8 +36,12 @@
                 </div>
                 <div class="col-md-4">
                   <div class="form-group">
-                    <label>Nomor Laporan</label>
+                    <label>Nomor Surat</label>
                     <input type="text" name="nosurat" class="form-control" require value="<?=set_value('nosurat')?>">
+                  </div>
+                  <div class="form-group">
+                    <label>Tanggal Surat</label>
+                    <input type="date" name="tglsurat" class="form-control" require value="<?=set_value('tglsurat')?>">
                   </div>
                   <div class="form-group">
                     <label>Kategori</label>

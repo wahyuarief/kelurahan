@@ -33,6 +33,7 @@ class Laporan extends CI_Controller {
     $this->form_validation->set_rules('nama', 'Judul', 'required');
     $this->form_validation->set_rules('isi', 'Isi', 'required|trim');
     $this->form_validation->set_rules('nosurat', 'Nomor Surat', 'required');
+    $this->form_validation->set_rules('tglsurat', 'Tanggal Surat', 'required');
     if($this->form_validation->run())
     {
       $s = $this->input->post('nama',true);
@@ -44,7 +45,8 @@ class Laporan extends CI_Controller {
         'isi' => $this->input->post('isi',true),
         'no_laporan' => $this->input->post('nosurat',true),
         'slug' => $slug,
-        'created_at' => date('Y-m-d H:i:s')
+        'tgl_masuk' => date('Y-m-d'),
+        'tgl_surat' => $this->input->post('tglsurat',true)
       );
 
       $this->crud_model->_create('laporan',$d);
@@ -62,6 +64,7 @@ class Laporan extends CI_Controller {
     $this->form_validation->set_rules('nama', 'Judul', 'required');
     $this->form_validation->set_rules('isi', 'Isi', 'required|trim');
     $this->form_validation->set_rules('nosurat', 'Nomor Surat', 'required');
+    $this->form_validation->set_rules('tglsurat', 'Tanggal Surat', 'required');
 
     if($this->form_validation->run())
     {
@@ -73,8 +76,8 @@ class Laporan extends CI_Controller {
         'nama' =>  $this->input->post('nama',true),
         'isi' => $this->input->post('isi',true),
         'no_laporan' => $this->input->post('nosurat',true),
-        'slug' =>$slug ,
-        'updated_at' => date('Y-m-d H:i:s'),
+        'slug' =>$slug,
+        'tgl_surat' => $this->input->post('tglsurat',true)
       );
       $w = array('id' => $this->input->post('id',true));
 
@@ -146,7 +149,7 @@ class Laporan extends CI_Controller {
         foreach($dataa as $d) {
           $html .= '<tr>';
           $html .= '<td colspan="5"><p>No Laporan   : '.$d['no_laporan'].'</p></td>';
-          $html .= '<td><p>'.$d['created_at'].'</p></td><br>';
+          $html .= '<td><p>'.$d['tgl_surat'].'</p></td><br>';
           $html .= '</tr>';
           $html .= '<tr>';
           $html .= '<td colspan="20"><p>Perihal      : '.$d['nama'].'</p></td><br><br>';
@@ -165,6 +168,6 @@ class Laporan extends CI_Controller {
 
     $pdf->writeHTMLCell(0, 0, '', '', $html, 0, 0, 0, true, '', true);
 
-    $pdf->Output('invoice_barang_keluar.pdf','I');
+    $pdf->Output('laporan.pdf','I');
   }
 }

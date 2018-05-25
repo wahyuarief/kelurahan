@@ -42,7 +42,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <input type="checkbox"><span class="label-text">Remember Me</span>
                 </label>
               </div>
-              <p class="semibold-text mb-2"><a href="#" data-toggle="flip">Lupa Password ?</a></p>
+              <!-- <p class="semibold-text mb-2"><a href="#" data-toggle="flip">Lupa Password ?</a></p> -->
             </div>
           </div>
           <div class="form-group btn-container">

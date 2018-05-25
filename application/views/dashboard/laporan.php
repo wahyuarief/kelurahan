@@ -23,6 +23,7 @@
                     <th width="50px">No Laporan</th>
                     <th>Hal</th>
                     <th width="50px">Tanggal Masuk</th>
+                    <th width="50px">Tanggal Surat</th>
                     <th width="50px">Opsi</th>
                   </tr>
                 </thead>
@@ -31,7 +32,8 @@
                     <tr>
                       <td><?php echo $row['no_laporan'] ?></td>
                       <td><?php echo $row['nama'] ?></td>
-                      <td><?php echo $row['created_at'] ?></td>
+                      <td><?php echo $row['tgl_masuk'] ?></td>
+                      <td><?php echo $row['tgl_surat'] ?></td>
                       <td>
                       <div class="btn-group">
                         <a href="<?=base_url('laporan/lihat/').$row['kat_id'].'/'.$row['id']?>" class="form-control btn btn-sm btn-info">Lihat</a>
