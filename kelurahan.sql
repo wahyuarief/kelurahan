@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 25 Mei 2018 pada 15.56
+-- Generation Time: 25 Mei 2018 pada 15.59
 -- Versi Server: 10.1.30-MariaDB
 -- PHP Version: 5.6.33
 
@@ -137,7 +137,7 @@ CREATE TABLE `laporan` (
 --
 
 INSERT INTO `laporan` (`id`, `peg_id`, `kat_id`, `nama`, `isi`, `no_laporan`, `slug`, `tgl_masuk`, `tgl_surat`) VALUES
-(1, 2016230074, 1, 'Perintah simpan pinjam dana liburan', 'Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan.', '32/BKD/2018', 'perintah-simpan-pinjam-dana-liburan', '2018-03-14', '2018-02-01'),
+(1, 0, 1, 'Perintah simpan pinjam dana liburan', 'Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan, Perintah simpan pinjam dana liburan.', '32/BKD/2018', 'perintah-simpan-pinjam-dana-liburan', '2018-03-14', '2018-02-01'),
 (3, 2016230086, 3, 'coba', '<p>coba</p>', '31/BKD/2018', 'coba-1', '2018-03-24', '0000-00-00'),
 (5, 2016230086, 2, 'lomba kemerdekaan', '<p>lomba</p>', '36/BKD/2018', 'lomba-kemerdekaan', '2018-03-27', '0000-00-00'),
 (7, 2016230086, 1, 'jakarta adalah ibukota replubik indonesia', '<p>jakarta</p>', '38/BKD/2018', 'jakarta-adalah-ibukota-replubik-indonesia', '2018-03-27', '0000-00-00'),
@@ -164,7 +164,7 @@ CREATE TABLE `menu` (
 
 CREATE TABLE `pegawai` (
   `id` int(32) NOT NULL,
-  `nip` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nip` int(32) NOT NULL,
   `nama_depan` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `nama_belakang` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `jabatan` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -182,8 +182,8 @@ CREATE TABLE `pegawai` (
 --
 
 INSERT INTO `pegawai` (`id`, `nip`, `nama_depan`, `nama_belakang`, `jabatan`, `keterangan`, `email`, `password`, `foto`, `created_at`, `updated_at`, `last_login`) VALUES
-(1, 'admin', 'Super', 'Admin', 'IT Staff', '', 'wahyu@hacktivist.or.id', '$2y$10$bwuXAyindhMcHZuO8bxLGOGGdaBjiQDPRpcT.DLKEBh9PNlzVGQTW', '7ed65719053a797e9334efbaee72e9e1.png', '2018-03-13 00:00:00', '2018-04-02 05:03:13', '2018-05-25 20:30:26'),
-(2, '2016230086', 'Muhammad ', 'Zahidin Nur', 'IT Staff', NULL, 'zahidin@gmail.com', '$2y$10$CTjzvmT5B.dxojKZOxsjTeMc4E7.Gwl9slAgX.0lozwGrKSMxzWdO', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2018-04-13 14:56:46');
+(1, 2016230074, 'Super', 'Admin', 'IT Staff', '', 'wahyu@hacktivist.or.id', '$2y$10$bwuXAyindhMcHZuO8bxLGOGGdaBjiQDPRpcT.DLKEBh9PNlzVGQTW', '7ed65719053a797e9334efbaee72e9e1.png', '2018-03-13 00:00:00', '2018-04-02 05:03:13', '2018-05-25 20:30:26'),
+(2, 2016230086, 'Muhammad ', 'Zahidin Nur', 'IT Staff', NULL, 'zahidin@gmail.com', '$2y$10$CTjzvmT5B.dxojKZOxsjTeMc4E7.Gwl9slAgX.0lozwGrKSMxzWdO', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2018-04-13 14:56:46');
 
 -- --------------------------------------------------------
 
